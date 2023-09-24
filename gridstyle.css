@@ -1,0 +1,34 @@
+/* Reset some default styles */
+body, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the button container as a 3x3 grid */
+.button-container {
+    display: grid;
+    margin: 250px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+    gap: 10px; /* Gap between buttons */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    height: 100vh; /* Make the container take up the full viewport height */
+    background-color: #f0f0f0; /* Background color for the page */
+}
+
+/* Style the buttons */
+.matrix-button {
+    padding: 80px 20px;
+    margin: 30px;
+    font-size: 18px;
+    background-color: #007BFF; /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for the buttons */
+.matrix-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
