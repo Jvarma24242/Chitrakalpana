@@ -126,42 +126,76 @@
 <body>
     <h1 style="padding-left:350px; padding-top:5px; position: relative;">What is the largest animal?</h1>
     <div class="button-container">
-        <button class="matrix-button button1 btn btn-primary btn-rounded "></button>
-        <button class="matrix-button button2 btn btn-primary btn-rounded"></button>
-        <button class="matrix-button button3 btn btn-primary btn-rounded"></button>
+        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded "></button>
+        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded"></button>
+        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded"></button>
         <div style="text-align: center;"></div>
         <div style="text-align: center;"></div>
         <div style="text-align: center;"></div>
-        <button class="matrix-button button4 btn btn-primary btn-rounded"></button>
-        <button class="matrix-button button5 btn btn-primary btn-rounded"></button>
-        <button class="matrix-button button6 btn btn-primary btn-rounded"></button>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"></button>
+        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded"></button>
+        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded"></button>
         <div style="text-align: center;"></div>
         <div style="text-align: center;"></div>
         <div style="text-align: center;"></div>
-        <button class="matrix-button btn button7 btn-primary btn-rounded"></button>
-        <button class="matrix-button btn button8 btn-primary btn-rounded"></button>
-        <button class="matrix-button btn button9 btn-primary btn-rounded"></button>
+        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded"></button>
+        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded"></button>
+        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded"></button>
         <div style="text-align: center;"></div>
         <div style="text-align: center;"></div>
         <div style="text-align: center;"></div>
-        <button class="button" onclick="showDialog()">Click me</button>
+        
     </div>
-    <div id="dialog" class="dialog-box">
-    <p>You Won 🎉</p>
-    <button onclick="closeDialog()">Quit</button>
-	<button onclick="closeDialog()">Continue</button>
-
-</div>
+    <div id="crt_dialog" class="dialog-box">
+        <p>You Won 🎉</p>
+        <button onclick="closeDialog('crt_dialog')">Quit</button>
+	    <button onclick="closeDialog('crt_dialog')">Continue</button>
+    </div>
+    <div id="wrong_dialog" class="dialog-box">
+        <p>Try Again!!</p>
+        <button onclick="closeDialog('wrong_dialog')">Quit</button>
+        <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
+    </div>
+    <div id="reveal_ans" class="dialog-box">
+        <p>You Lost! Answer is Nile river! :D</p>
+        <button onclick="closeDialog('reveal_ans')">Quit</button>
+        <button onclick="closeDialog('reveal_ans')">Continue</button>
+    </div>
 <script>
+var num_button_clicks = 0;
 // Function to show the dialog box
-function showDialog() {
-    document.getElementById("dialog").style.display = "block";
+function rightAnswer() {
+    document.getElementById("crt_dialog").style.display = "block";
+}
+
+function tryAgain() {
+    document.getElementById("wrong_dialog").style.display = "block";
+}
+
+function revealAns() {
+    document.getElementById("reveal_ans").style.display = "block";
 }
 
 // Function to close the dialog box
-function closeDialog() {
-    document.getElementById("dialog").style.display = "none";
+function closeDialog(dialog_id) {
+    document.getElementById(dialog_id).style.display = "none";
 }
+
+// Verify if the answer clicked is correct or not.
+function checkAnswer(buttonId) {
+    num_button_clicks = num_button_clicks + 1;
+    if (buttonId == "button8") {
+        rightAnswer();
+    } else {
+        if(num_button_clicks == 1) {
+            tryAgain();
+        } else {
+            revealAns();
+            // TODO: Redirect users to grid2.html.
+        }
+    }
+}
+
 </script>
 </body>
 </html>
