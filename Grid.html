@@ -39,6 +39,20 @@
         cursor: pointer;
         height: 130px;
     }
+
+    /* Hover effect for the buttons */
+    .matrix-button:hover {
+        background-color: #0056b3; /* Darker color on hover */
+    }
+
+    /* Styling for the button */
+    .button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
     
     .button1 {
         background-image: url('https://ichef.bbci.co.uk/news/976/cpsprodpb/292A/production/_121183501_gettyimages-1053558054.jpg.webp');
@@ -46,11 +60,32 @@
         background-position: center;
         background-size: cover;
     }
-    
-    /* Hover effect for the buttons */
-    .matrix-button:hover {
-        background-color: #0056b3; /* Darker color on hover */
+
+    .button2 {
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Elephas_maximus_%28Bandipur%29.jpg/1200px-Elephas_maximus_%28Bandipur%29.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
+    .button3 {
+        background-image: url('https://sandiegozoowildlifealliance.org/sites/default/files/hero/Rhino_0.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .button4 {
+        background-image: url('https://worldanimalfoundation.org/wp-content/uploads/2023/02/Hippopotamus-p1-review-1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .button5 {
+        background-image: url('https://d1jyxxz9imt9yb.cloudfront.net/medialib/3597/image/s768x1300/WR202206_GiraffeTranslocation_012_360559_reduced.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
     .dialog-box {
     display: none;
     width: 300px;
@@ -63,27 +98,28 @@
     transform: translate(-50%, -50%);
 }
 
-/* Styling for the button */
-.button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
 </style>
 <body>
-    <h1 style="padding-left:350px; padding-top:10px; position: relative;">What is the largest animal?</h1>
+    <h1 style="padding-left:350px; padding-top:5px; position: relative;">What is the largest animal?</h1>
     <div class="button-container">
-        <button class="matrix-button button1 btn btn-primary btn-rounded "> </button>
-        <button class="matrix-button btn btn-primary btn-rounded"></button>
-        <button class="matrix-button btn btn-primary btn-rounded"></button>
-        <button class="matrix-button btn btn-primary btn-rounded"></button>
-        <button class="matrix-button btn btn-primary btn-rounded"></button>
-        <button class="matrix-button btn btn-primary btn-rounded"></button>
-        <button class="matrix-button btn btn-primary btn-rounded"></button>
-        <button class="matrix-button btn btn-primary btn-rounded"></button>
-        <button class="matrix-button btn btn-primary btn-rounded"></button>
+        <button class="matrix-button button1 btn btn-primary btn-rounded "></button>
+        <button class="matrix-button button2 btn btn-primary btn-rounded"></button>
+        <button class="matrix-button button3 btn btn-primary btn-rounded"></button>
+        <div style="text-align: center;">African Elephant</div>
+        <div style="text-align: center;">Asian Elephant</div>
+        <div style="text-align: center;">White Rhinoceros</div>
+        <button class="matrix-button button4 btn btn-primary btn-rounded"></button>
+        <button class="matrix-button button5 btn btn-primary btn-rounded"></button>
+        <button class="matrix-button button6 btn btn-primary btn-rounded"></button>
+        <div style="text-align: center;">Hippopotamus</div>
+        <div style="text-align: center;">Giraffe</div>
+        <div style="text-align: center;">African Buffalo</div>
+        <button class="matrix-button btn button7 btn-primary btn-rounded"></button>
+        <button class="matrix-button btn button8 btn-primary btn-rounded"></button>
+        <button class="matrix-button btn button9 btn-primary btn-rounded"></button>
+        <div style="text-align: center;">Kodaik Bear</div>
+        <div style="text-align: center;">Grizzly Bear</div>
+        <div style="text-align: center;">Polar Bear</div>
         <button class="button" onclick="showDialog()">Click me</button>
     </div>
     <div id="dialog" class="dialog-box">
