@@ -50,7 +50,27 @@
     /* Hover effect for the buttons */
     .matrix-button:hover {
         background-color: #0056b3; /* Darker color on hover */
-    }    
+    }
+    .dialog-box {
+    display: none;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Styling for the button */
+.button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 </style>
 <body>
     <h1 style="padding-left:350px; padding-top:10px; position: relative;">What is the largest animal?</h1>
@@ -64,6 +84,24 @@
         <button class="matrix-button btn btn-primary btn-rounded"></button>
         <button class="matrix-button btn btn-primary btn-rounded"></button>
         <button class="matrix-button btn btn-primary btn-rounded"></button>
+        <button class="button" onclick="showDialog()">Click me</button>
     </div>
+    <div id="dialog" class="dialog-box">
+    <p>You Won 🎉</p>
+    <button onclick="closeDialog()">Quit</button>
+	<button onclick="closeDialog()">Continue</button>
+
+</div>
+<script>
+// Function to show the dialog box
+function showDialog() {
+    document.getElementById("dialog").style.display = "block";
+}
+
+// Function to close the dialog box
+function closeDialog() {
+    document.getElementById("dialog").style.display = "none";
+}
+</script>
 </body>
 </html>
