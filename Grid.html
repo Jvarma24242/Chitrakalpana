@@ -67,18 +67,21 @@
         background-position: center;
         background-size: cover;
     }
+
     .button3 {
         background-image: url('https://sandiegozoowildlifealliance.org/sites/default/files/hero/Rhino_0.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
+
     .button4 {
         background-image: url('https://worldanimalfoundation.org/wp-content/uploads/2023/02/Hippopotamus-p1-review-1.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
+
     .button5 {
         background-image: url('https://d1jyxxz9imt9yb.cloudfront.net/medialib/3597/image/s768x1300/WR202206_GiraffeTranslocation_012_360559_reduced.jpg');
         background-repeat: no-repeat;
@@ -111,56 +114,90 @@
     }
     
     .dialog-box {
-    display: none;
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+        display: none;
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
 </style>
 <body>
     <h1 style="padding-left:350px; padding-top:5px; position: relative;">What is the largest animal?</h1>
     <div class="button-container">
-        <button class="matrix-button button1 btn btn-primary btn-rounded "></button>
-        <button class="matrix-button button2 btn btn-primary btn-rounded"></button>
-        <button class="matrix-button button3 btn btn-primary btn-rounded"></button>
+        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <div style="text-align: center;">African Elephant</div>
         <div style="text-align: center;">Asian Elephant</div>
         <div style="text-align: center;">White Rhinoceros</div>
-        <button class="matrix-button button4 btn btn-primary btn-rounded"></button>
-        <button class="matrix-button button5 btn btn-primary btn-rounded"></button>
-        <button class="matrix-button button6 btn btn-primary btn-rounded"></button>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <div style="text-align: center;">Hippopotamus</div>
         <div style="text-align: center;">Giraffe</div>
         <div style="text-align: center;">African Buffalo</div>
-        <button class="matrix-button btn button7 btn-primary btn-rounded"></button>
-        <button class="matrix-button btn button8 btn-primary btn-rounded"></button>
-        <button class="matrix-button btn button9 btn-primary btn-rounded"></button>
+        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <div style="text-align: center;">Kodaik Bear</div>
         <div style="text-align: center;">Grizzly Bear</div>
         <div style="text-align: center;">Polar Bear</div>
         <button class="button" onclick="showDialog()">Click me</button>
     </div>
-    <div id="dialog" class="dialog-box">
-    <p>You Won 🎉</p>
-    <button onclick="closeDialog()">Quit</button>
-	<button onclick="closeDialog()">Continue</button>
+    <div id="crt_dialog" class="dialog-box">
+        <p>You Won 🎉</p>
+        <button onclick="closeDialog('crt_dialog')">Quit</button>
+	    <button onclick="closeDialog('crt_dialog')">Continue</button>
+    </div>
+    <div id="wrong_dialog" class="dialog-box">
+        <p>Try Again!!</p>
+        <button onclick="closeDialog('wrong_dialog')">Quit</button>
+        <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
+    </div>
+    <div id="reveal_ans" class="dialog-box">
+        <p>You Lost! Answer is Africal Elephant! :D</p>
+        <button onclick="closeDialog('reveal_ans')">Quit</button>
+        <button onclick="closeDialog('reveal_ans')">Continue</button>
+    </div>
 
-</div>
 <script>
+var num_button_clicks = 0;
 // Function to show the dialog box
-function showDialog() {
-    document.getElementById("dialog").style.display = "block";
+function rightAnswer() {
+    document.getElementById("crt_dialog").style.display = "block";
+}
+
+function tryAgain() {
+    document.getElementById("wrong_dialog").style.display = "block";
+}
+
+function revealAns() {
+    document.getElementById("reveal_ans").style.display = "block";
 }
 
 // Function to close the dialog box
-function closeDialog() {
-    document.getElementById("dialog").style.display = "none";
+function closeDialog(dialog_id) {
+    document.getElementById(dialog_id).style.display = "none";
+}
+
+// Verify if the answer clicked is correct or not.
+function checkAnswer(buttonId) {
+    num_button_clicks = num_button_clicks + 1;
+    if (buttonId == "button1") {
+        rightAnswer();
+    } else {
+        if(num_button_clicks == 1) {
+            tryAgain();
+        } else {
+            revealAns();
+            // TODO: Redirect users to grid2.html.
+        }
+    }
 }
 </script>
 </body>
