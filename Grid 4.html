@@ -167,7 +167,7 @@
 var num_button_clicks = 0;
 const urlParams = new URLSearchParams(window.location.search);
 var name = urlParams.get('name');
-var score = urlParams.get('score');
+var score = parseInt(urlParams.get('score'));
 // Function to show the dialog box
 function rightAnswer() {
     score = score + 1; 
@@ -214,6 +214,17 @@ document.getElementById("quitButtonReveal").addEventListener("click", function()
         // Use the window.location.href property to set the new URL
         window.location.href = "home.html"; // Specify the relative path to your second page
 });
+
+document.getElementById("continueButtonCrt").addEventListener("click", function() {
+           // Use the window.location.href property to set the new URL
+           const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
+            window.location.href = `Grid 5.html?${query}`; // Specify the relative path to your second page
+        });
+document.getElementById("continueButtonReveal").addEventListener("click", function() {
+            // Use the window.location.href property to set the new URL
+            const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
+            window.location.href = `Grid 5.html?${query}`; // Specify the relative path to your second page
+        });
 
 document.getElementById('nameDisplay').innerText = `Name: ${name}`;
 document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
