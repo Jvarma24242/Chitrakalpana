@@ -150,26 +150,27 @@
     </div>
     <div id="crt_dialog" class="dialog-box">
         <p>You Won 🎉</p>
-        <button onclick="closeDialog('crt_dialog')">Quit</button>
-	    <button onclick="closeDialog('crt_dialog')">Continue</button>
+        <button id="quitButtonCrt" onclick="closeDialog('crt_dialog')">Quit</button>
+	    <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
         <p>Try Again!!</p>
-        <button onclick="closeDialog('wrong_dialog')">Quit</button>
+        <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
     <div id="reveal_ans" class="dialog-box">
         <p>You Lost! Answer is Nile river! :D</p>
-        <button onclick="closeDialog('reveal_ans')">Quit</button>
-        <button onclick="closeDialog('reveal_ans')">Continue</button>
+        <button id="quitButtonReveal" onclick="closeDialog('reveal_ans')">Quit</button>
+        <button id="continueButtonReveal" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
 <script>
 var num_button_clicks = 0;
 const urlParams = new URLSearchParams(window.location.search);
-const name = urlParams.get('name');
-const score = urlParams.get('score');
+var name = urlParams.get('name');
+var score = parseInt(urlParams.get('score'));
 // Function to show the dialog box
 function rightAnswer() {
+    score = score + 1
     document.getElementById("crt_dialog").style.display = "block";
 }
 
@@ -200,6 +201,31 @@ function checkAnswer(buttonId) {
         }
     }
 }
+
+document.getElementById("quitButtonCrt").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+document.getElementById("quitButtonWrong").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+document.getElementById("quitButtonReveal").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+
+
+document.getElementById("continueButtonCrt").addEventListener("click", function() {
+           // Use the window.location.href property to set the new URL
+           const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
+            window.location.href = `Grid 4.html?${query}`; // Specify the relative path to your second page
+        });
+document.getElementById("continueButtonReveal").addEventListener("click", function() {
+            // Use the window.location.href property to set the new URL
+            const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
+            window.location.href = `Grid 4.html?${query}`; // Specify the relative path to your second page
+        });
 
 document.getElementById('nameDisplay').innerText = `Name: ${name}`;
 document.getElementById('scoreDisplay').innerText = `Score: ${score}`;

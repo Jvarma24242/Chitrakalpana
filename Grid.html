@@ -152,18 +152,18 @@
     </div>
     <div id="crt_dialog" class="dialog-box">
         <p>You Won 🎉</p>
-        <button id="quitButton" onclick="closeDialog('crt_dialog')">Quit</button>
-	    <button id="continueButton" onclick="closeDialog('crt_dialog')">Continue</button>
+        <button id="quitButtonCrt" onclick="closeDialog('crt_dialog')">Quit</button>
+	    <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
         <p>Try Again!!</p>
-        <button id="quitButton" onclick="closeDialog('wrong_dialog')">Quit</button>
+        <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
     <div id="reveal_ans" class="dialog-box">
         <p>You Lost! Answer is Africal Elephant! :D</p>
-        <button id="quitButton" onclick="closeDialog('reveal_ans')">Quit</button>
-        <button id="continueButton" onclick="closeDialog('reveal_ans')">Continue</button>
+        <button id="quitButtonReveal" onclick="closeDialog('reveal_ans')">Quit</button>
+        <button id="continueButtonReveal" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
 
 <script>
@@ -205,12 +205,27 @@ function checkAnswer(buttonId) {
     }
 }
 
-document.getElementById("quitButton").addEventListener("click", function() {
+document.getElementById("quitButtonCrt").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+document.getElementById("quitButtonWrong").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+document.getElementById("quitButtonReveal").addEventListener("click", function() {
         // Use the window.location.href property to set the new URL
         window.location.href = "home.html"; // Specify the relative path to your second page
 });
 
-document.getElementById("continueButton").addEventListener("click", function() {
+
+
+document.getElementById("continueButtonCrt").addEventListener("click", function() {
+            // Use the window.location.href property to set the new URL
+            const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score_value)}`;
+            window.location.href = `Grid 2.html?${query}`; // Specify the relative path to your second page
+        });
+document.getElementById("continueButtonReveal").addEventListener("click", function() {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score_value)}`;
             window.location.href = `Grid 2.html?${query}`; // Specify the relative path to your second page

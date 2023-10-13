@@ -124,24 +124,25 @@
 
 </style>
 <body>
-    <h1 style="padding-left:350px; padding-top:5px; position: relative;">Who painted the Mona Lisa?
-</h1>
+    <div id="nameDisplay" style="background-color: aqua; width: 200px;">hi</div>
+    <div id="scoreDisplay" style="background-color: aqua; width: 200px;">hello</div>
+    <h1 style="padding-left:350px; padding-top:5px; position: relative;">Who painted the Mona Lisa?</h1>
     <div class="button-container">
-        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded "></button>
-        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded"></button>
-        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded"></button>
+        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <div style="text-align: center;">Vincent van Gogh</div>
         <div style="text-align: center;">Salvador Dalí</div>
         <div style="text-align: center;">Pablo Picasso</div>
-        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"></button>
-        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded"></button>
-        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded"></button>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <div style="text-align: center;">Edvard Munch</div>
         <div style="text-align: center;">Leonardo da Vinci</div>
         <div style="text-align: center;">Johannes Vermeer</div>
-        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded"></button>
-        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded"></button>
-        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded"></button>
+        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <div style="text-align: center;">Pablo Picasso</div>
         <div style="text-align: center;">Vincent van Gogh</div>
         <div style="text-align: center;">Grant Wood</div>
@@ -149,23 +150,27 @@
     </div>
     <div id="crt_dialog" class="dialog-box">
         <p>You Won 🎉</p>
-        <button onclick="closeDialog('crt_dialog')">Quit</button>
-	    <button onclick="closeDialog('crt_dialog')">Continue</button>
+        <button id="quitButtonCrt" onclick="closeDialog('crt_dialog')">Quit</button>
+	    <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
         <p>Try Again!!</p>
-        <button onclick="closeDialog('wrong_dialog')">Quit</button>
+        <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
     <div id="reveal_ans" class="dialog-box">
-        <p>You Lost! Answer is Nile river! :D</p>
-        <button onclick="closeDialog('reveal_ans')">Quit</button>
-        <button onclick="closeDialog('reveal_ans')">Continue</button>
+        <p>You Lost! Answer is Leonardo da Vinci :D</p>
+        <button id="quitButtonReveal" onclick="closeDialog('reveal_ans')">Quit</button>
+        <button id="continueButtonReveal" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
 <script>
 var num_button_clicks = 0;
+const urlParams = new URLSearchParams(window.location.search);
+var name = urlParams.get('name');
+var score = urlParams.get('score');
 // Function to show the dialog box
 function rightAnswer() {
+    score = score + 1; 
     document.getElementById("crt_dialog").style.display = "block";
 }
 
@@ -185,7 +190,7 @@ function closeDialog(dialog_id) {
 // Verify if the answer clicked is correct or not.
 function checkAnswer(buttonId) {
     num_button_clicks = num_button_clicks + 1;
-    if (buttonId == "button") {
+    if (buttonId == "button5") {
         rightAnswer();
     } else {
         if(num_button_clicks == 1) {
@@ -196,6 +201,22 @@ function checkAnswer(buttonId) {
         }
     }
 }
+
+document.getElementById("quitButtonCrt").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+document.getElementById("quitButtonWrong").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+document.getElementById("quitButtonReveal").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+
+document.getElementById('nameDisplay').innerText = `Name: ${name}`;
+document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
 
 </script>
 </body>
