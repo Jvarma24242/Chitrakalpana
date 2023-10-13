@@ -124,6 +124,8 @@
 
 </style>
 <body>
+    <div id="nameDisplay" style="background-color: aqua; width: 200px;"></div>
+    <div id="scoreDisplay" style="background-color: aqua; width: 200px;"></div>
     <h1 style="padding-left:350px; padding-top:5px; position: relative;">What is the largest river in the world?</h1>
     <div class="button-container">
         <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
@@ -163,6 +165,9 @@
     </div>
 <script>
 var num_button_clicks = 0;
+const urlParams = new URLSearchParams(window.location.search);
+const name = urlParams.get('name');
+const score = urlParams.get('score');
 // Function to show the dialog box
 function rightAnswer() {
     document.getElementById("crt_dialog").style.display = "block";
@@ -195,6 +200,11 @@ function checkAnswer(buttonId) {
         }
     }
 }
+
+document.getElementById('nameDisplay').innerText = `Name: ${name}`;
+document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+
+
 
 </script>
 </body>

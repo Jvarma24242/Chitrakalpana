@@ -71,8 +71,9 @@ h1 {
             window.location.href = "home.html"; // Specify the relative path to your second page
         });
         document.getElementById("startButton").addEventListener("click", function() {
+            const name = document.getElementById("name").value;
             // Use the window.location.href property to set the new URL
-            window.location.href = "grid.html"; // Specify the relative path to your second page
+            window.location.href = `grid.html?name=${encodeURIComponent(name)}`; // Specify the relative path to your second page
         });
     </script>
 </body>

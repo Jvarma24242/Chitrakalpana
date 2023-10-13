@@ -127,6 +127,8 @@
 
 </style>
 <body>
+    <div id="nameDisplay" style="background-color: aqua; width: 200px;"></div>
+    <div id="scoreDisplay" style="background-color: aqua; width: 200px;"></div>
     <h1 style="padding-left:350px; padding-top:5px; position: relative;">What is the largest animal?</h1>
     <div class="button-container">
         <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
@@ -150,24 +152,28 @@
     </div>
     <div id="crt_dialog" class="dialog-box">
         <p>You Won 🎉</p>
-        <button onclick="closeDialog('crt_dialog')">Quit</button>
-	    <button onclick="closeDialog('crt_dialog')">Continue</button>
+        <button id="quitButton" onclick="closeDialog('crt_dialog')">Quit</button>
+	    <button id="continueButton" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
         <p>Try Again!!</p>
-        <button onclick="closeDialog('wrong_dialog')">Quit</button>
+        <button id="quitButton" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
     <div id="reveal_ans" class="dialog-box">
         <p>You Lost! Answer is Africal Elephant! :D</p>
-        <button onclick="closeDialog('reveal_ans')">Quit</button>
-        <button onclick="closeDialog('reveal_ans')">Continue</button>
+        <button id="quitButton" onclick="closeDialog('reveal_ans')">Quit</button>
+        <button id="continueButton" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
 
 <script>
 var num_button_clicks = 0;
+var score_value = 0;
+const urlParams = new URLSearchParams(window.location.search);
+const name = urlParams.get('name');
 // Function to show the dialog box
 function rightAnswer() {
+    score_value = score_value + 1;
     document.getElementById("crt_dialog").style.display = "block";
 }
 
@@ -198,6 +204,20 @@ function checkAnswer(buttonId) {
         }
     }
 }
+
+document.getElementById("quitButton").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+
+document.getElementById("continueButton").addEventListener("click", function() {
+            // Use the window.location.href property to set the new URL
+            const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score_value)}`;
+            window.location.href = `Grid 2.html?${query}`; // Specify the relative path to your second page
+        });
+    
+    document.getElementById('nameDisplay').innerText = `Name: ${name}`;
+    document.getElementById('scoreDisplay').innerText = `Score: ${score_value}`;
 </script>
 </body>
 </html>
