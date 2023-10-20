@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="randomiser.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -157,7 +158,7 @@
     </div>
     <div id="wrong_dialog" class="dialog-box">
         <p>Try Again!!</p>
-        <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
+        <button id="quitButtonWrong" onclick="redirect">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
     <div id="reveal_ans" class="dialog-box">
@@ -223,12 +224,15 @@ document.getElementById("quitButtonReveal").addEventListener("click", function()
 document.getElementById("continueButtonCrt").addEventListener("click", function() {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score_value)}`;
-            window.location.href = `Grid 2.html?${query}`; // Specify the relative path to your second page
+            const nextPage = redirectToRandomPage('Grid.html');
+
+            window.location.href = `${nextPage}?${query}`; // Specify the relative path to your second page
+            
         });
 document.getElementById("continueButtonReveal").addEventListener("click", function() {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score_value)}`;
-            window.location.href = `Grid 2.html?${query}`; // Specify the relative path to your second page
+            window.location.href = `Grid2.html?${query}`; // Specify the relative path to your second page
         });
     
     document.getElementById('nameDisplay').innerText = `Name: ${name}`;

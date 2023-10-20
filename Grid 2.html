@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="randomiser.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -217,8 +218,10 @@ document.getElementById("quitButtonReveal").addEventListener("click", function()
 
 document.getElementById("continueButtonCrt").addEventListener("click", function() {
            // Use the window.location.href property to set the new URL
-           const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
-            window.location.href = `Grid 3.html?${query}`; // Specify the relative path to your second page
+           const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score_value)}`;
+            const nextPage = redirectToRandomPage('Grid 2.html');
+
+            window.location.href = `${nextPage}?${query}`; // Specify the relative path to your second page
         });
 document.getElementById("continueButtonReveal").addEventListener("click", function() {
             // Use the window.location.href property to set the new URL
