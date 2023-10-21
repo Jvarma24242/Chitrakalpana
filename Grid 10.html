@@ -10,104 +10,113 @@
 </head>
 <style>/* Reset some default styles */
     
-    .button1 {
-        background-image: url('');
+     .button1 {
+        background-image: url('https://solarsystem.nasa.gov/system/stellar_items/image_files/2_feature_1600x900_mercury.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
 
     .button2 {
-        background-image: url('');
+        background-image: url('https://cdn.mos.cms.futurecdn.net/RifjtkFLBEFgzkZqWEh69P.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     .button3 {
-        background-image: url('');
+        background-image: url('https://solarsystem.nasa.gov/system/stellar_items/image_files/4_earth.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     .button4 {
-        background-image: url('');
+        background-image: url('https://starwalk.space/gallery/images/mars-the-ultimate-guide/1920x1080.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     .button5 {
-        background-image: url('');
+        background-image: url('https://cdn.britannica.com/66/155966-131-17B5B518/Jupiter.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
-    .button6 {
-        background-image: url('');
+.button6 {
+        background-image: url('https://starwalk.space/gallery/images/saturn-planet-guide/1920x1080.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     .button7 {
-        background-image: url('');
+        background-image: url('https://cdn.mos.cms.futurecdn.net/fniNDsYDMWq9dg4EiXM2UQ.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     .button8 {
-        background-image: url('');
+        background-image: url('https://images.squarespace-cdn.com/content/v1/5fa5ec79661ee904d2973ca0/1678752888290-2A53B1ST09WTKNPYW35R/neptune.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     .button9 {
-        background-image: url('');
+        background-image: url('https://cdn.mos.cms.futurecdn.net/DoZSMXF87kCuzbymsuEFHo.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
+    
+
 </style>
 <body>
-    <h1 style="padding-left:350px; padding-top:5px; position: relative;"></h1>
+    <div id="nameDisplay" style="background-color: aqua; width: 200px;"></div>
+    <div id="scoreDisplay" style="background-color: aqua; width: 200px;"></div>
+    <h1 style="padding-left:350px; padding-top:5px; position: relative;">Which planet in our solar system has the longest day?</h1>
     <div class="button-container">
-        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded "></button>
-        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded"></button>
-        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded"></button>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
-        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"></button>
-        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded"></button>
-        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded"></button>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
-        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded"></button>
-        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded"></button>
-        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded"></button>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
+        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <div style="text-align: center;">Mercury</div>
+        <div style="text-align: center;">Venus</div> // correct answer
+        <div style="text-align: center;">Earth</div>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <div style="text-align: center;">Mars</div>
+        <div style="text-align: center;">Jupiter</div>
+        <div style="text-align: center;">Saturn</div>
+        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <div style="text-align: center;">Uranus</div>
+        <div style="text-align: center;">Neptune</div>
+        <div style="text-align: center;">Pluto</div>
         
     </div>
     <div id="crt_dialog" class="dialog-box">
         <p>You Won 🎉</p>
-        <button onclick="closeDialog('crt_dialog')">Quit</button>
-	    <button onclick="closeDialog('crt_dialog')">Continue</button>
+        <button id="quitButtonCrt" onclick="closeDialog('crt_dialog')">Quit</button>
+	    <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
         <p>Try Again!!</p>
-        <button onclick="closeDialog('wrong_dialog')">Quit</button>
+        <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
     <div id="reveal_ans" class="dialog-box">
         <p>You Lost! Answer is Nile river! :D</p>
-        <button onclick="closeDialog('reveal_ans')">Quit</button>
-        <button onclick="closeDialog('reveal_ans')">Continue</button>
+        <button id="quitButtonReveal" onclick="closeDialog('reveal_ans')">Quit</button>
+        <button id="continueButtonReveal" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
 <script>
 var num_button_clicks = 0;
+const urlParams = new URLSearchParams(window.location.search);
+var name = urlParams.get('name');
+var score = parseInt(urlParams.get('score'));
+
 // Function to show the dialog box
 function rightAnswer() {
+    score = score + 1;
     document.getElementById("crt_dialog").style.display = "block";
 }
 
@@ -127,7 +136,7 @@ function closeDialog(dialog_id) {
 // Verify if the answer clicked is correct or not.
 function checkAnswer(buttonId) {
     num_button_clicks = num_button_clicks + 1;
-    if (buttonId == "button") {
+    if (buttonId == "button2") {
         rightAnswer();
     } else {
         if(num_button_clicks == 1) {
@@ -138,6 +147,35 @@ function checkAnswer(buttonId) {
         }
     }
 }
+
+document.getElementById("quitButtonCrt").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+document.getElementById("quitButtonWrong").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+document.getElementById("quitButtonReveal").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+
+document.getElementById("continueButtonCrt").addEventListener("click", function() {
+           // Use the window.location.href property to set the new URL
+           const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score_value)}`;
+            const nextPage = redirectToRandomPage('Grid 2.html');
+
+            window.location.href = `${nextPage}?${query}`; // Specify the relative path to your second page
+        });
+document.getElementById("continueButtonReveal").addEventListener("click", function() {
+            // Use the window.location.href property to set the new URL
+            const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
+            window.location.href = `Grid 6.html?${query}`; // Specify the relative path to your second page
+        });
+
+document.getElementById('nameDisplay').innerText = `Name: ${name}`;
+document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
 
 </script>
 </body>
