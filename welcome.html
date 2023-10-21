@@ -21,7 +21,7 @@ body, h1, button {
     align-items: center;
     height: 100vh;
     color: #fff; /* Text color */
-    background-image: url("Background.jpg");
+    background-image: url("https://www.solidbackgrounds.com/images/website/560x315/560x315-abstract-ice-water-free-website-background-image.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -29,38 +29,92 @@ body, h1, button {
 
 /* Style the game name */
 h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+.name {
+    position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+@keyframes change {
+  0% {background-color: #4CAF50; transform: scale(1);}
+  50% {background-color: #45a049; transform: scale(1.1);}
+  100% {background-color: #4CAF50; transform: scale(1);}
 }
 
 /* Style the "Start Game" button */
-.start-button {
+.button {
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #007BFF; /* Button background color */
-    color: #fff; /* Text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
+    display: inline-block;
+  padding: 10px 20px;
+  background-color: coral;
+  color: white;
+  text-align: center;
+  font-size: 16px;
 }
 
 /* Hover effect for the button */
-.start-button:hover {
-    background-color: #0056b3; /* Darker color on hover */
+.button:hover {
+    animation: change 1s;
 }
 
 </style>
 <body>
     <div class="content"> 
-        <h1>Welcome to</h1>
-        <h2>Chithrakalpana</h2>
+        <h1>Welcome to Chithrakalpana</h1>
         <div class="form-group">
             <label class="name" style="width:400px; font-size: 28px;">Enter Your Name:</label>
             <br/>
             <input type="text" id="name" placeholder="Your Name" style="width: 400px; height:50px">
             <br/><br/>
-            <button class="btn btn-primary btn-rounded" id="startButton" style="padding: 10px 20px; font-size: 16px;">Start Game</button>
-            <button class="btn btn-primary btn-rounded" id="quitButton" style="padding: 10px 20px; margin-left:160px; font-size: 16px;">Quit Game</button>
+            <button class="btn btn-primary btn-rounded button" id="startButton" style="padding: 10px 20px; font-size: 16px;">Start Game</button>
+            <button class="btn btn-primary btn-rounded button" id="quitButton" style="padding: 10px 20px; margin-left:160px; font-size: 16px;">Quit Game</button>
         </div>
     </div>
 
