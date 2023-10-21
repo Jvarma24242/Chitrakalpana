@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="randomiser.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Chithrakalpana Game</title>
@@ -127,7 +128,10 @@ h1 {
         document.getElementById("startButton").addEventListener("click", function() {
             const name = document.getElementById("name").value;
             // Use the window.location.href property to set the new URL
-            window.location.href = `grid.html?name=${encodeURIComponent(name)}`; // Specify the relative path to your second page
+            const query = `name=${encodeURIComponent(name)}`;
+            let nextPage = "Grid.html";
+
+            window.location.href = `${nextPage}?${query}`; // Specify the relative path to your second page
         });
     </script>
 </body>

@@ -15,6 +15,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
 
     .button2 {
@@ -22,6 +23,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
 
     .button3 {
@@ -29,6 +31,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
 
     .button4 {
@@ -36,6 +39,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
 
     .button5 {
@@ -43,62 +47,67 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button6 {
         background-image: url('https://www.safariwest.com/wp-content/uploads/cape-buffalo.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button7 {
         background-image: url('https://bear.org/wp-content/uploads/2008/10/large_brown_bear.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button8 {
         background-image: url('https://cdn.britannica.com/18/161718-050-2DB34DD6/Grizzly-bear.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button9 {
         background-image: url('https://www.mymcpl.org/sites/default/files/styles/card_4_3/public/2023-02/GettyImages-1296252531.jpg?itok=XL15jvSe');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     
 </style>
 <body>
     <div style="width: 100%; overflow: hidden;"> 
-        <div style="width: 300px; float: left;">
-            <div id="nameDisplay" style="background-color: aqua; width: 200px;"></div>
-            <div id="scoreDisplay" style="background-color: aqua; width: 200px;"></div>
+        <div style="width: 250px; float: left; border-radius: 15px 15px 15px 15px ;background-color: #c2c5cc;">
+            <div id="nameDisplay" style="color: black ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
+            <div id="scoreDisplay" style="color: black ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
         </div>
-        <div style="margin-left: 75px; ">
-            <h1 class="question" style="padding-left:350px; padding-top:5px; position: relative; color: #8B4513;">What is the largest animal?</h1>
+        <div style="margin-left: 350px; margin-right: 350px; background-color: #c2c5cc; border-radius: 30px 0px 30px 0px ">
+            <h2 class="question" style="padding-left: 45px; padding-top:5px; position: relative; color: black; font-family: cursive;">What is the largest animal?</h1>
         </div>
     </div>
-    <div class="button-container">
+    <div class="button-container" style="margin-top: 5px;">
         <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <div style="text-align: center;">African Elephant</div>
-        <div style="text-align: center;">Asian Elephant</div>
-        <div style="text-align: center;">White Rhinoceros</div>
+        <div class="option" style="text-align: center;">African Elephant</div>
+        <div class="option" style="text-align: center;">Asian Elephant</div>
+        <div class="option" style="text-align: center;">White Rhinoceros</div>
         <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <div style="text-align: center;">Hippopotamus</div>
-        <div style="text-align: center;">Giraffe</div>
-        <div style="text-align: center;">African Buffalo</div>
+        <div class="option" style="text-align: center;">Hippopotamus</div>
+        <div class="option" style="text-align: center;">Giraffe</div>
+        <div class="option" style="text-align: center;">African Buffalo</div>
         <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <div style="text-align: center;">Kodaik Bear</div>
-        <div style="text-align: center;">Grizzly Bear</div>
-        <div style="text-align: center;">Polar Bear</div>
+        <div class="option" style="text-align: center;">Kodaik Bear</div>
+        <div class="option" style="text-align: center;">Grizzly Bear</div>
+        <div class="option" style="text-align: center;">Polar Bear</div>
     </div>
     <div id="crt_dialog" class="dialog-box">
         <p>You Won 🎉</p>
@@ -168,20 +177,16 @@ document.getElementById("quitButtonReveal").addEventListener("click", function()
         window.location.href = "home.html"; // Specify the relative path to your second page
 });
 
-
-
 document.getElementById("continueButtonCrt").addEventListener("click", function() {
-            // Use the window.location.href property to set the new URL
-            const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score_value)}`;
-            const nextPage = redirectToRandomPage('Grid.html');
-
-            window.location.href = `${nextPage}?${query}`; // Specify the relative path to your second page
+           // Use the window.location.href property to set the new URL
+           const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score_value)}`;
+            window.location.href = `Grid 2.html?${query}`; // Specify the relative path to your second page
             
         });
 document.getElementById("continueButtonReveal").addEventListener("click", function() {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score_value)}`;
-            window.location.href = `Grid2.html?${query}`; // Specify the relative path to your second page
+            window.location.href = `Grid 2.html?${query}`; // Specify the relative path to your second page
         });
     
     document.getElementById('nameDisplay').innerText = `Name: ${name}`;

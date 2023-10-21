@@ -56,3 +56,11 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 }
+
+.option {
+    background-color: #c2c5cc;
+    border-radius: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: cursive;
+}

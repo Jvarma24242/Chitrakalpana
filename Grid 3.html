@@ -15,6 +15,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
 
     .button2 {
@@ -22,75 +23,89 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button3 {
         background-image: url('https://geography.name/wp-content/uploads/2015/10/GATEWAY-Lena.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button4 {
         background-image: url('https://www.sodhatravel.com/hubfs/The%20Story%20and%20Significance%20of%20River%20Ganga-Sodha%20Travel.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button5 {
         background-image: url('https://media.istockphoto.com/id/514651019/photo/view-over-the-orinocco-river.jpg?s=612x612&w=0&k=20&c=AKvb3P3mXZMBYst2Bz52gtjqg5_Scv09XipvuucnSkI=');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button6 {
         background-image: url('https://www.arcgis.com/sharing/rest/content/items/ba769245730943699456b7428eb6e7fa/info/thumbnail/ago_downloaded.jpg?w=800');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button7 {
         background-image: url('https://www.americanrivers.org/wp-content/uploads/2022/12/B-9.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button8 {
         background-image: url('https://cdn.creatureandcoagency.com/uploads/2018/09/Nile-River-Facts-Image-2.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button9 {
         background-image: url('https://cdn.britannica.com/77/152577-050-5563FDA0/bend-Yangtze-River-Yunnan-China.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     
 
 </style>
 <body>
-    <div id="nameDisplay" style="background-color: aqua; width: 200px;"></div>
-    <div id="scoreDisplay" style="background-color: aqua; width: 200px;"></div>
-    <h1 style="padding-left:350px; padding-top:5px; position: relative;">What is the largest river in the world?</h1>
-    <div class="button-container">
+    <div style="width: 100%; overflow: hidden;"> 
+        <div style="width: 250px; float: left; border-radius: 15px 15px 15px 15px ;background-color: #c2c5cc;">
+            <div id="nameDisplay" style="color: black ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
+            <div id="scoreDisplay" style="color: black ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
+        </div>
+        <div style="margin-left: 350px; margin-right: 350px; background-color: #c2c5cc; border-radius: 30px 0px 30px 0px ">
+            <h2 class="question" style="padding-left: 45px; padding-top:5px; position: relative; color: black; font-family: cursive;">What is the largest river in the world?</h1>
+        </div>
+    </div>
+    <div class="button-container" style="margin-top: 5px;">
         <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <div style="text-align: center;">Congo river</div>
-        <div style="text-align: center;">Amazon river</div>
-        <div style="text-align: center;">Lena river</div>
+        <div class="option" style="text-align: center;">Congo river</div>
+        <div class="option" style="text-align: center;">Amazon river</div>
+        <div class="option" style="text-align: center;">Lena river</div>
         <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <div style="text-align: center;">Ganga river</div>
-        <div style="text-align: center;">Orinoco river</div>
-        <div style="text-align: center;">Parana river</div>
+        <div class="option" style="text-align: center;">Ganga river</div>
+        <div class="option" style="text-align: center;">Orinoco river</div>
+        <div class="option" style="text-align: center;">Parana river</div>
         <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
         <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <div style="text-align: center;">Missisipi river</div>
-        <div style="text-align: center;">Nile river</div>
-        <div style="text-align: center;">Yangtze river</div>
+        <div class="option" style="text-align: center;">Missisipi river</div>
+        <div class="option" style="text-align: center;">Nile river</div>
+        <div class="option" style="text-align: center;">Yangtze river</div>
         
     </div>
     <div id="crt_dialog" class="dialog-box">
@@ -162,11 +177,9 @@ document.getElementById("quitButtonReveal").addEventListener("click", function()
 
 
 document.getElementById("continueButtonCrt").addEventListener("click", function() {
-           // Use the window.location.href property to set the new URL
-           const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score_value)}`;
-            const nextPage = redirectToRandomPage('Grid 2.html');
-
-            window.location.href = `${nextPage}?${query}`; // Specify the relative path to your second page
+            // Use the window.location.href property to set the new URL
+            const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
+            window.location.href = `Grid 4.html?${query}`; // Specify the relative path to your second page
         });
 document.getElementById("continueButtonReveal").addEventListener("click", function() {
             // Use the window.location.href property to set the new URL

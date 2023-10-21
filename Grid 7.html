@@ -11,105 +11,125 @@
 <style>/* Reset some default styles */
     
     .button1 {
-        background-image: url('');
+        background-image: url('https://images.unsplash.com/photo-1636115734305-aac2f83cd8d4?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZG9sbGFyfGVufDB8fDB8fHww');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
 
     .button2 {
-        background-image: url('');
+        background-image: url('https://cdn.pixabay.com/photo/2013/07/13/01/21/euro-155597_1280.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button3 {
-        background-image: url('');
+        background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/coindesk/PHDFJSNJ2ZG2LL5HO7FW76HPQA.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button4 {
-        background-image: url('');
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/1000_yen_Natsume_Soseki.jpg/640px-1000_yen_Natsume_Soseki.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button5 {
-        background-image: url('');
+        background-image: url('https://www.investopedia.com/thmb/ak983jHGT68hQvxG2Fe2s1jI5b0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-153205900-5b08cb708e1b6e003ed4e7d6.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button6 {
-        background-image: url('');
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Banknote_5000_rubles_%281997%29_front.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button7 {
-        background-image: url('');
+        background-image: url('https://www.un.org/africarenewal/sites/www.un.org.africarenewal/files/styles/ar_main_story_big_picture/public/WEBIMG_4758.jpg?itok=JBDoEtge');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button8 {
-        background-image: url('');
+        background-image: url('https://images.wsj.net/im-23969?width=1280&size=1');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
     .button9 {
-        background-image: url('');
+        background-image: url('https://c8.alamy.com/comp/E5P521/turkish-lira-banknotes-isolated-E5P521.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 100px;
     }
- 
 
 </style>
 <body>
-    <h1 style="padding-left:350px; padding-top:5px; position: relative;"></h1>
-    <div class="button-container">
-        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded "></button>
-        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded"></button>
-        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded"></button>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
-        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"></button>
-        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded"></button>
-        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded"></button>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
-        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded"></button>
-        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded"></button>
-        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded"></button>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
-        <div style="text-align: center;"></div>
-        
+    <div style="width: 100%; overflow: hidden;"> 
+        <div style="width: 250px; float: left; border-radius: 15px 15px 15px 15px ;background-color: #c2c5cc;">
+            <div id="nameDisplay" style="color: black ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
+            <div id="scoreDisplay" style="color: black ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
+        </div>
+        <div style="margin-left: 350px; margin-right: 300px; background-color: #c2c5cc; border-radius: 30px 0px 30px 0px ">
+            <h2 class="question" style="padding-left: 45px; position: relative; color: black; font-family: cursive;">What is the currency of Japan?</h1>
+        </div>
+    </div>
+    <div class="button-container" style="margin-top: 5px;">
+        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <div class="option" style="text-align: center;">USD</div>
+        <div class="option" style="text-align: center;">Euro</div>
+        <div class="option" style="text-align: center;">Swiss Franc</div>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <div class="option" style="text-align: center;">Yen</div>
+        <div class="option" style="text-align: center;">HKD</div>
+        <div class="option" style="text-align: center;">Ruble</div>
+        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <div class="option" style="text-align: center;">Yuan</div>
+        <div class="option" style="text-align: center;">Krona</div>
+        <div class="option" style="text-align: center;">lira</div>    
     </div>
     <div id="crt_dialog" class="dialog-box">
         <p>You Won 🎉</p>
-        <button onclick="closeDialog('crt_dialog')">Quit</button>
-	    <button onclick="closeDialog('crt_dialog')">Continue</button>
+        <button id="quitButtonCrt" onclick="closeDialog('crt_dialog')">Quit</button>
+	    <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
         <p>Try Again!!</p>
-        <button onclick="closeDialog('wrong_dialog')">Quit</button>
+        <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
     <div id="reveal_ans" class="dialog-box">
-        <p>You Lost! Answer is Nile river! :D</p>
-        <button onclick="closeDialog('reveal_ans')">Quit</button>
-        <button onclick="closeDialog('reveal_ans')">Continue</button>
+        <p>You Lost! Answer is Japanese Yen! :D</p>
+        <button id="quitButtonReveal" onclick="closeDialog('reveal_ans')">Quit</button>
+        <button id="continueButtonReveal" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
 <script>
 var num_button_clicks = 0;
+const urlParams = new URLSearchParams(window.location.search);
+var name = urlParams.get('name');
+var score = parseInt(urlParams.get('score'));
+
 // Function to show the dialog box
 function rightAnswer() {
+    score = score + 1
     document.getElementById("crt_dialog").style.display = "block";
 }
 
@@ -129,17 +149,44 @@ function closeDialog(dialog_id) {
 // Verify if the answer clicked is correct or not.
 function checkAnswer(buttonId) {
     num_button_clicks = num_button_clicks + 1;
-    if (buttonId == "button") {
+    if (buttonId == "button4") {
         rightAnswer();
     } else {
         if(num_button_clicks == 1) {
             tryAgain();
         } else {
             revealAns();
-            // TODO: Redirect users to grid2.html.
         }
     }
 }
+
+document.getElementById("quitButtonCrt").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+document.getElementById("quitButtonWrong").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+document.getElementById("quitButtonReveal").addEventListener("click", function() {
+        // Use the window.location.href property to set the new URL
+        window.location.href = "home.html"; // Specify the relative path to your second page
+});
+
+document.getElementById("continueButtonCrt").addEventListener("click", function() {
+           // Use the window.location.href property to set the new URL
+           // Use the window.location.href property to set the new URL
+           const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
+            window.location.href = `EndPage.html?${query}`; // Specify the relative path to your second page
+        });
+document.getElementById("continueButtonReveal").addEventListener("click", function() {
+            // Use the window.location.href property to set the new URL
+            const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
+            window.location.href = `EndPage.html?${query}`; // Specify the relative path to your second page
+        });
+
+document.getElementById('nameDisplay').innerText = `Name: ${name}`;
+document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
 
 </script>
 </body>
