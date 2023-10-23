@@ -2,89 +2,82 @@
 <html lang="en">
 
 <head>
+    <script src="randomiser.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Chithrakalpana</title>
 </head>
 <style>
     /* Reset some default styles */
 
     .button1 {
-        background-image: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR4GlTzKuqP4x3QH5iMv4A5NLBjF3h9JPFNJ2yUjPj6n2nJsPj9');
+        background-image: url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        border-radius: 100px;
+        border-radius: 100px;   
     }
 
     .button2 {
-        background-image: url('https://hips.hearstapps.com/hmg-prod/images/salvador-dali-gettyimages-2695565.jpg?crop=1xw:0.7504168982768205xh;center,top&resize=1200:*');
+        background-image: url('https://m.media-amazon.com/images/I/71J80MAP+mL._AC_UF894,1000_QL80_.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         border-radius: 100px;
     }
-
     .button3 {
-        background-image: url('https://cdn.britannica.com/63/59963-050-C03F29B9/Pablo-Picasso.jpg');
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         border-radius: 100px;
     }
-
     .button4 {
-        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyVT3oGY0Av5bQCqBE5TzI74o427abnmDB4O4bOwVZVgqsbH-d');
+        background-image: url('https://cdn.britannica.com/29/22529-004-ED1907BE/Union-Flag-Cross-St-Andrew-of-George.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         border-radius: 100px;
     }
-
     .button5 {
-        background-image: url('https://cdn.britannica.com/06/200006-131-ABB681CF/Leonardo-da-Vinci-Italian-Renaissance-Florence-Engraving-1500.jpg');
+        background-image: url('https://cdn11.bigcommerce.com/s-w6fxwapwzi/images/stencil/1280x1280/products/2524/5333/2x3-germany-flag-image__20615.1582735698.jpg?c=1');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         border-radius: 100px;
     }
-
     .button6 {
-        background-image: url('https://cdn.britannica.com/33/194733-050-4CF75F31/Girl-with-a-Pearl-Earring-canvas-Johannes-1665.jpg');
+        background-image: url('https://www.advantour.com/russia/images/symbolics/russia-flag.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         border-radius: 100px;
     }
-
     .button7 {
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Portrait_de_Picasso%2C_1908.jpg');
+        background-image: url('https://t3.ftcdn.net/jpg/00/62/19/54/360_F_62195416_wfzM4Baz70OjEU54EhsCpvuQWlIhukPg.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         border-radius: 100px;
     }
-
     .button8 {
-        background-image: url('https://cdn.britannica.com/36/69636-050-81A93193/Self-Portrait-artist-panel-board-Vincent-van-Gogh-1887.jpg');
+        background-image: url('https://media.istockphoto.com/id/878587072/photo/china-flag-a-series-of-flags-of-the-world.jpg?s=612x612&w=0&k=20&c=UaEuM-KRtk71BDDNTVpmTO-wJS2TsC1D0PGcMxJyeyA=');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         border-radius: 100px;
     }
-
     .button9 {
-        background-image: url('https://whitneymedia.org/assets/image/820357/large_American_Gothic.jpg');
+        background-image: url('https://media.istockphoto.com/id/934017954/vector/canada-flag.jpg?s=612x612&w=0&k=20&c=QYOJlgWtujlAPzncX5H4UFPDpySMhoh2iPc_zi2t_zQ=');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        border-radius: 100px;
     }
 </style>
 
-<body style="background-color: #EBE4D1;">
+<body>
     <div style="width: 100%; overflow: hidden;">
         <div style="float: left">
             <a href="home.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
@@ -95,40 +88,31 @@
             <div id="scoreDisplay" style="color: white ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
         </div>
         <div
-            style="height: 60px; margin-left: 350px; margin-right: 350px; background-color: #26577C; border-radius: 30px 0px 30px 0px ">
+            style="height: 90px; margin-left: 300px; margin-right: 300px; background-color: #26577C; border-radius: 30px 0px 30px 0px ">
             <h2 class="question"
                 style="padding-left: 45px; padding-top:10px; position: relative; color: white; font-family: cursive;">
-                Who painted the Mona Lisa?</h1>
+                Which country is known as the Land of the Rising Sun?</h1>
         </div>
     </div>
     <div class="button-container" style="margin-top: 5px;">
-        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded"
-            onclick="checkAnswer(this.id)"></button>
-        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded"
-            onclick="checkAnswer(this.id)"></button>
-        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded"
-            onclick="checkAnswer(this.id)"></button>
-        <div class="option" style="text-align: center;">Vincent van Gogh</div>
-        <div class="option" style="text-align: center;">Salvador Dalí</div>
-        <div class="option" style="text-align: center;">Pablo Picasso</div>
-        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"
-            onclick="checkAnswer(this.id)"></button>
-        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded"
-            onclick="checkAnswer(this.id)"></button>
-        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded"
-            onclick="checkAnswer(this.id)"></button>
-        <div class="option" style="text-align: center;">Edvard Munch</div>
-        <div class="option" style="text-align: center;">Leonardo da Vinci</div>
-        <div class="option" style="text-align: center;">Johannes Vermeer</div>
-        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded"
-            onclick="checkAnswer(this.id)"></button>
-        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded"
-            onclick="checkAnswer(this.id)"></button>
-        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded"
-            onclick="checkAnswer(this.id)"></button>
-        <div class="option" style="text-align: center;">Pablo Picasso</div>
-        <div class="option" style="text-align: center;">Vincent van Gogh</div>
-        <div class="option" style="text-align: center;">Grant Wood</div>
+        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <div class="option" style="text-align: center;">USA</div>
+        <div class="option" style="text-align: center;">India</div>
+        <div class="option" style="text-align: center;">France</div>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <div class="option" style="text-align: center;">UK</div>
+        <div class="option" style="text-align: center;">Germany</div>
+        <div class="option" style="text-align: center;">Russia</div>
+        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <div class="option" style="text-align: center;">Japan</div>
+        <div class="option" style="text-align: center;">China</div>
+        <div class="option" style="text-align: center;">Canada</div>
 
     </div>
     <div id="crt_dialog" class="dialog-box">
@@ -142,7 +126,7 @@
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
     <div id="reveal_ans" class="dialog-box">
-        <p>You Lost! Answer is Leonardo da Vinci 😀</p>
+        <p>You Lost! Answer is Japan! 😀</p>
         <button id="quitButtonReveal" onclick="closeDialog('reveal_ans')">Quit</button>
         <button id="continueButtonReveal" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
@@ -153,7 +137,7 @@
         var score = parseInt(urlParams.get('score'));
         // Function to show the dialog box
         function rightAnswer() {
-            score = score + 1;
+            score = score + 1
             document.getElementById("crt_dialog").style.display = "block";
         }
 
@@ -173,7 +157,7 @@
         // Verify if the answer clicked is correct or not.
         function checkAnswer(buttonId) {
             num_button_clicks = num_button_clicks + 1;
-            if (buttonId == "button5") {
+            if (buttonId == "button7") {
                 rightAnswer();
             } else {
                 if (num_button_clicks == 1) {
@@ -184,6 +168,7 @@
                 }
             }
         }
+
 
         document.getElementById("quitButtonCrt").addEventListener("click", function () {
             // Use the window.location.href property to set the new URL
@@ -201,12 +186,12 @@
         document.getElementById("continueButtonCrt").addEventListener("click", function () {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
-            window.location.href = `Grid 5.html?${query}`; // Specify the relative path to your second page
+            window.location.href = `Grid 10.html?${query}`; // Specify the relative path to your second page
         });
         document.getElementById("continueButtonReveal").addEventListener("click", function () {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
-            window.location.href = `Grid 5.html?${query}`; // Specify the relative path to your second page
+            window.location.href = `Grid 10.html?${query}`; // Specify the relative path to your second page
         });
 
         document.getElementById('nameDisplay').innerText = `Name: ${name}`;

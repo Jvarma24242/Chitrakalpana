@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://www.solidbackgrounds.com/images/website/560x315/560x315-abstract-ice-water-free-website-background-image.jpg");
+    background-color: #EBE4D1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -49,8 +49,10 @@ body {
 display: none;
 width: 300px;
 padding: 20px;
-border: 1px solid #ccc;
-background-color: #fff;
+color: white;
+font-family: cursive;
+border: 3px solid #26577C;
+background-color: #E55604;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -58,7 +60,7 @@ transform: translate(-50%, -50%);
 }
 
 .option {
-    background-color: #c2c5cc;
+    background-color: #B4B4B3;
     border-radius: 100px;
     margin-left: 30px;
     margin-right: 30px;

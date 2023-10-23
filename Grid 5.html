@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="randomiser.js"></script>
     <meta charset="UTF-8">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Chithrakalpana</title>
 </head>
-<style>/* Reset some default styles */
-    
+<style>
+    /* Reset some default styles */
+
     .button1 {
         background-image: url('https://hips.hearstapps.com/hmg-prod/images/gettyimages-544586095.jpg');
         background-repeat: no-repeat;
@@ -25,6 +27,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button3 {
         background-image: url('https://weareactors.com/wp-content/uploads/2023/01/William-Shakespeare.jpg-1024x1024.webp');
         background-repeat: no-repeat;
@@ -32,6 +35,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button4 {
         background-image: url('https://ei7cr2pn3uw.exactdn.com/wp-content/uploads/2019/05/Henrilk-Ibsen-Portrait.jpg?strip=all&lossy=1&ssl=1');
         background-repeat: no-repeat;
@@ -39,6 +43,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button5 {
         background-image: url('https://cdn.britannica.com/69/91669-050-AD3D4FB9/Arthur-Miller.jpg');
         background-repeat: no-repeat;
@@ -46,6 +51,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button6 {
         background-image: url('https://static01.nyt.com/images/2005/10/02/obituaries/03wilson.large1.jpg?quality=75&auto=webp&disable=upscale');
         background-repeat: no-repeat;
@@ -53,13 +59,15 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button7 {
         background-image: url('https://media.npr.org/assets/img/2016/01/06/gettyimages-3202710_custom-438b77b7ca17ded7a0582b7bcd8d588915f09a0c.jpg');
-	background-repeat: no-repeat;
+        background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         border-radius: 100px;
     }
+
     .button8 {
         background-image: url('https://cdn.britannica.com/50/23350-050-A1469D3C/George-Bernard-Shaw-country-home-Ayot-St-1946.jpg');
         background-repeat: no-repeat;
@@ -67,6 +75,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button9 {
         background-image: url('https://s.wsj.net/public/resources/images/BN-RA500_bkrvon_M_20161201044711.jpg');
         background-repeat: no-repeat;
@@ -74,44 +83,58 @@
         background-size: cover;
         border-radius: 100px;
     }
-
-
 </style>
-<body>
-    <div style="width: 100%; overflow: hidden;"> 
-        <div style="width: 250px; float: left; border-radius: 15px 15px 15px 15px ;background-color: #c2c5cc;">
-            <div id="nameDisplay" style="color: black ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
-            <div id="scoreDisplay" style="color: black ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
+
+<body style="background-color: #EBE4D1;">
+    <div style="width: 100%; overflow: hidden;">
+        <div style="float: left">
+            <a href="home.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
+                    style="width:50px; height:50px"></img></a>
         </div>
-        <div style="margin-left: 350px; margin-right: 350px; background-color: #c2c5cc; border-radius: 30px 0px 30px 0px ">
-            <h2 class="question" style="padding-left: 45px; padding-top:5px; position: relative; color: black; font-family: cursive;">Who wrote the play "Romeo and Juliet"?</h1>
+        <div style="width: 250px; float: right; border-radius: 15px 15px 15px 15px ;background-color: #26577C;">
+            <div id="nameDisplay" style="color: white ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
+            <div id="scoreDisplay" style="color: white ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
+        </div>
+        <div
+            style="height: 60px; margin-left: 300px; margin-right: 300px; background-color: #26577C; border-radius: 30px 0px 30px 0px ">
+            <h2 class="question"
+                style="padding-left: 45px; padding-top:10px; position: relative; color: white; font-family: cursive;">
+                Who wrote the play "Romeo and Juliet"?</h1>
         </div>
     </div>
     <div class="button-container" style="margin-top: 5px;">
-        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">Anton Chekhov</div>
         <div class="option" style="text-align: center;">Tennessee Williams</div>
         <div class="option" style="text-align: center;">William Shakespeare</div>
-        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded onclick="checkAnswer(this.id)"></button>
-        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded onclick="checkAnswer(this.id)"></button>
-        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded onclick="checkAnswer(this.id)"></button>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="
+            checkAnswer(this.id)"></button>
+        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="
+            checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">Henrik Ibsen</div>
         <div class="option" style="text-align: center;">Arthur Miller</div>
         <div class="option" style="text-align: center;">August Wilson</div>
-        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded onclick="checkAnswer(this.id)"></button>
-        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded onclick="checkAnswer(this.id)"></button>
-        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded onclick="checkAnswer(this.id)"></button>
+        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="
+            checkAnswer(this.id)"></button>
+        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="
+            checkAnswer(this.id)"></button>
+        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="
+            checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">Edward Albee</div>
         <div class="option" style="text-align: center;">George Bernard Shaw</div>
         <div class="option" style="text-align: center;">Eugene O'Neill</div>
-        
+
     </div>
     <div id="crt_dialog" class="dialog-box">
         <p>You Won 🎉</p>
         <button id="quitButtonCrt" onclick="closeDialog('crt_dialog')">Quit</button>
-	    <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
+        <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
         <p>Try Again!!</p>
@@ -119,77 +142,78 @@
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
     <div id="reveal_ans" class="dialog-box">
-        <p>You Lost! Answer is William Shakespeare :D</p>
+        <p>You Lost! Answer is William Shakespeare 😀</p>
         <button id="quitButtonReveal" onclick="closeDialog('reveal_ans')">Quit</button>
         <button id="continueButtonReveal" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
-<script>
-var num_button_clicks = 0;
-const urlParams = new URLSearchParams(window.location.search);
-var name = urlParams.get('name');
-var score = parseInt(urlParams.get('score'));
+    <script>
+        var num_button_clicks = 0;
+        const urlParams = new URLSearchParams(window.location.search);
+        var name = urlParams.get('name');
+        var score = parseInt(urlParams.get('score'));
 
-// Function to show the dialog box
-function rightAnswer() {
-    score = score + 1;
-    document.getElementById("crt_dialog").style.display = "block";
-}
-
-function tryAgain() {
-    document.getElementById("wrong_dialog").style.display = "block";
-}
-
-function revealAns() {
-    document.getElementById("reveal_ans").style.display = "block";
-}
-
-// Function to close the dialog box
-function closeDialog(dialog_id) {
-    document.getElementById(dialog_id).style.display = "none";
-}
-
-// Verify if the answer clicked is correct or not.
-function checkAnswer(buttonId) {
-    num_button_clicks = num_button_clicks + 1;
-    if (buttonId == "button3") {
-        rightAnswer();
-    } else {
-        if(num_button_clicks == 1) {
-            tryAgain();
-        } else {
-            revealAns();
-            // TODO: Redirect users to grid2.html.
+        // Function to show the dialog box
+        function rightAnswer() {
+            score = score + 1;
+            document.getElementById("crt_dialog").style.display = "block";
         }
-    }
-}
 
-document.getElementById("quitButtonCrt").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "home.html"; // Specify the relative path to your second page
-});
-document.getElementById("quitButtonWrong").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "home.html"; // Specify the relative path to your second page
-});
-document.getElementById("quitButtonReveal").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "home.html"; // Specify the relative path to your second page
-});
+        function tryAgain() {
+            document.getElementById("wrong_dialog").style.display = "block";
+        }
 
-document.getElementById("continueButtonCrt").addEventListener("click", function() {
-           // Use the window.location.href property to set the new URL
-           const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
+        function revealAns() {
+            document.getElementById("reveal_ans").style.display = "block";
+        }
+
+        // Function to close the dialog box
+        function closeDialog(dialog_id) {
+            document.getElementById(dialog_id).style.display = "none";
+        }
+
+        // Verify if the answer clicked is correct or not.
+        function checkAnswer(buttonId) {
+            num_button_clicks = num_button_clicks + 1;
+            if (buttonId == "button3") {
+                rightAnswer();
+            } else {
+                if (num_button_clicks == 1) {
+                    tryAgain();
+                } else {
+                    revealAns();
+                    // TODO: Redirect users to grid2.html.
+                }
+            }
+        }
+
+        document.getElementById("quitButtonCrt").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
+        document.getElementById("quitButtonWrong").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
+        document.getElementById("quitButtonReveal").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
+
+        document.getElementById("continueButtonCrt").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
             window.location.href = `Grid 6.html?${query}`; // Specify the relative path to your second page
         });
-document.getElementById("continueButtonReveal").addEventListener("click", function() {
+        document.getElementById("continueButtonReveal").addEventListener("click", function () {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
             window.location.href = `Grid 6.html?${query}`; // Specify the relative path to your second page
         });
 
-document.getElementById('nameDisplay').innerText = `Name: ${name}`;
-document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+        document.getElementById('nameDisplay').innerText = `Name: ${name}`;
+        document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
 
-</script>
+    </script>
 </body>
+
 </html>

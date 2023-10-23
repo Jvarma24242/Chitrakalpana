@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
+    <script src="randomiser.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Chithrakalpana</title>
 </head>
 <style>
     /* Reset some default styles */
 
     .button1 {
-        background-image: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR4GlTzKuqP4x3QH5iMv4A5NLBjF3h9JPFNJ2yUjPj6n2nJsPj9');
+        background-image: url('https://solarsystem.nasa.gov/system/stellar_items/image_files/2_feature_1600x900_mercury.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -20,7 +21,7 @@
     }
 
     .button2 {
-        background-image: url('https://hips.hearstapps.com/hmg-prod/images/salvador-dali-gettyimages-2695565.jpg?crop=1xw:0.7504168982768205xh;center,top&resize=1200:*');
+        background-image: url('https://cdn.mos.cms.futurecdn.net/RifjtkFLBEFgzkZqWEh69P.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -28,7 +29,7 @@
     }
 
     .button3 {
-        background-image: url('https://cdn.britannica.com/63/59963-050-C03F29B9/Pablo-Picasso.jpg');
+        background-image: url('https://solarsystem.nasa.gov/system/stellar_items/image_files/4_earth.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -36,7 +37,7 @@
     }
 
     .button4 {
-        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyVT3oGY0Av5bQCqBE5TzI74o427abnmDB4O4bOwVZVgqsbH-d');
+        background-image: url('https://starwalk.space/gallery/images/mars-the-ultimate-guide/1920x1080.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -44,7 +45,7 @@
     }
 
     .button5 {
-        background-image: url('https://cdn.britannica.com/06/200006-131-ABB681CF/Leonardo-da-Vinci-Italian-Renaissance-Florence-Engraving-1500.jpg');
+        background-image: url('https://cdn.britannica.com/66/155966-131-17B5B518/Jupiter.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -52,7 +53,7 @@
     }
 
     .button6 {
-        background-image: url('https://cdn.britannica.com/33/194733-050-4CF75F31/Girl-with-a-Pearl-Earring-canvas-Johannes-1665.jpg');
+        background-image: url('https://starwalk.space/gallery/images/saturn-planet-guide/1920x1080.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -60,7 +61,7 @@
     }
 
     .button7 {
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Portrait_de_Picasso%2C_1908.jpg');
+        background-image: url('https://cdn.mos.cms.futurecdn.net/fniNDsYDMWq9dg4EiXM2UQ.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -68,7 +69,7 @@
     }
 
     .button8 {
-        background-image: url('https://cdn.britannica.com/36/69636-050-81A93193/Self-Portrait-artist-panel-board-Vincent-van-Gogh-1887.jpg');
+        background-image: url('https://images.squarespace-cdn.com/content/v1/5fa5ec79661ee904d2973ca0/1678752888290-2A53B1ST09WTKNPYW35R/neptune.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -76,7 +77,7 @@
     }
 
     .button9 {
-        background-image: url('https://whitneymedia.org/assets/image/820357/large_American_Gothic.jpg');
+        background-image: url('https://cdn.mos.cms.futurecdn.net/DoZSMXF87kCuzbymsuEFHo.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -84,7 +85,7 @@
     }
 </style>
 
-<body style="background-color: #EBE4D1;">
+<body>
     <div style="width: 100%; overflow: hidden;">
         <div style="float: left">
             <a href="home.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
@@ -95,10 +96,10 @@
             <div id="scoreDisplay" style="color: white ; font-family: cursive; width: 200px; margin-left: 20px;"></div>
         </div>
         <div
-            style="height: 60px; margin-left: 350px; margin-right: 350px; background-color: #26577C; border-radius: 30px 0px 30px 0px ">
+            style="height: 90px; margin-left: 300px; margin-right: 300px; background-color: #26577C; border-radius: 30px 0px 30px 0px ">
             <h2 class="question"
                 style="padding-left: 45px; padding-top:10px; position: relative; color: white; font-family: cursive;">
-                Who painted the Mona Lisa?</h1>
+                Which planet in our solar system has the longest day?</h1>
         </div>
     </div>
     <div class="button-container" style="margin-top: 5px;">
@@ -108,27 +109,27 @@
             onclick="checkAnswer(this.id)"></button>
         <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded"
             onclick="checkAnswer(this.id)"></button>
-        <div class="option" style="text-align: center;">Vincent van Gogh</div>
-        <div class="option" style="text-align: center;">Salvador Dalí</div>
-        <div class="option" style="text-align: center;">Pablo Picasso</div>
+        <div class="option" style="text-align: center;">Mercur</div>
+        <div class="option" style="text-align: center;">Venus</div>
+        <div class="option" style="text-align: center;">Earth</div>
         <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"
             onclick="checkAnswer(this.id)"></button>
         <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded"
             onclick="checkAnswer(this.id)"></button>
         <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded"
             onclick="checkAnswer(this.id)"></button>
-        <div class="option" style="text-align: center;">Edvard Munch</div>
-        <div class="option" style="text-align: center;">Leonardo da Vinci</div>
-        <div class="option" style="text-align: center;">Johannes Vermeer</div>
+        <div class="option" style="text-align: center;">Mars</div>
+        <div class="option" style="text-align: center;">Jupiter</div>
+        <div class="option" style="text-align: center;">Saturn</div>
         <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded"
             onclick="checkAnswer(this.id)"></button>
         <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded"
             onclick="checkAnswer(this.id)"></button>
         <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded"
             onclick="checkAnswer(this.id)"></button>
-        <div class="option" style="text-align: center;">Pablo Picasso</div>
-        <div class="option" style="text-align: center;">Vincent van Gogh</div>
-        <div class="option" style="text-align: center;">Grant Wood</div>
+        <div class="option" style="text-align: center;">Uranus</div>
+        <div class="option" style="text-align: center;">Neptune</div>
+        <div class="option" style="text-align: center;">Pluto</div>
 
     </div>
     <div id="crt_dialog" class="dialog-box">
@@ -142,7 +143,7 @@
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
     <div id="reveal_ans" class="dialog-box">
-        <p>You Lost! Answer is Leonardo da Vinci 😀</p>
+        <p>You Lost! Answer is Venus 😀</p>
         <button id="quitButtonReveal" onclick="closeDialog('reveal_ans')">Quit</button>
         <button id="continueButtonReveal" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
@@ -173,7 +174,7 @@
         // Verify if the answer clicked is correct or not.
         function checkAnswer(buttonId) {
             num_button_clicks = num_button_clicks + 1;
-            if (buttonId == "button5") {
+            if (buttonId == "button2") {
                 rightAnswer();
             } else {
                 if (num_button_clicks == 1) {
@@ -201,12 +202,12 @@
         document.getElementById("continueButtonCrt").addEventListener("click", function () {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
-            window.location.href = `Grid 5.html?${query}`; // Specify the relative path to your second page
+            window.location.href = `EndPage.html?${query}`; // Specify the relative path to your second page
         });
         document.getElementById("continueButtonReveal").addEventListener("click", function () {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
-            window.location.href = `Grid 5.html?${query}`; // Specify the relative path to your second page
+            window.location.href = `EndPage.html?${query}`; // Specify the relative path to your second page
         });
 
         document.getElementById('nameDisplay').innerText = `Name: ${name}`;
