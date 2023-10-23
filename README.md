@@ -3,6 +3,8 @@
 ### Game Objective
 The game **Chitrakalpana** aims to challenge and test the player's ability to choose the right image from a collection of nine accessible images in response to a given question. This game is made to keep players interested and amused while improving their vision and decision-making skills. The game enhances the player's ability to properly and swiftly detect images. Players must exercise critical thought and decision-making, which improves their cognitive abilities. Players may learn new information and gain new perspectives from educational questions. Either by yourself or in a competitive social context, it is a pleasant and exciting way to pass the time.
 
+---
+
 ### Game Rules
 * A question or description is displayed at the top of the screen to start each round. The player must first read and understand this question to choose the correct answer.
 * The player can choose by tapping or clicking on the image they think is the proper response to make their decision.
@@ -11,9 +13,13 @@ The game **Chitrakalpana** aims to challenge and test the player's ability to ch
 * The game will give the correct answer and advance the player to the next level if they choose two incorrect image. The correct response will be indicated.
 * For each accurate response, players can accrue points. Points will be added up for a final score and the level advancement is done.
 * The option to exit the game at any point is provided to players.
+  
+---
 
 ### Technology Stack
 * This game is developed using basic `HTML`, `CSS` and `Javascript`. To add additional CSS effects, a CSS framework called `Bootstrap` is called.
+
+---
 
 ### Setup and Deployment instructions
 **Setup**:
