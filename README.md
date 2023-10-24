@@ -33,3 +33,9 @@ The game **Chitrakalpana** aims to challenge and test the player's ability to ch
 * In the `Code and automation` section of the sidebar, click `Pages`.
 * Under `Source` section, choose the appropriate branch which should be published in Github pages. Leave the remaining settings as it is. 
 * At the top you can see the link at which the applciation will be hosted. If we open that link, we can see our application up and running.
+
+---
+
+### Link to hosted game
+
+* https://jvarma24242.github.io/Chitrakalpana/  
