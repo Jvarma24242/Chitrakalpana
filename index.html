@@ -83,8 +83,13 @@ h1
     animation: change 1s;
 }
 
+#backgroundMusic {
+  display: none;
+}
+
 </style>
 <body>
+    <audio id="backgroundMusic" src="background_music.mp3"></audio>
     <div class="content"> 
         <h1 style="font-family: cursive;">Chithrakalpana</h1>
         <button class="btn btn-primary btn-rounded start-button" id="StartGame" style="font-family: cursive;">Start Game</button>
@@ -96,6 +101,14 @@ h1
             // Use the window.location.href property to set the new URL
             window.location.href = "welcome.html"; // Specify the relative path to your second page
         });
+// Start the background music when the game loads.
+window.onload = function() {
+  var backgroundMusic = document.getElementById("backgroundMusic");
+  backgroundMusic.play();
+}
+
+// Loop the background music so that it plays continuously.
+backgroundMusic.loop = true;
     </script>
 </body>
 </html>
