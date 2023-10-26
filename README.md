@@ -38,4 +38,9 @@ The game **Chitrakalpana** aims to challenge and test the player's ability to ch
 
 ### Link to hosted game
 
-* https://jvarma24242.github.io/Chitrakalpana/  
+* https://jvarma24242.github.io/Chitrakalpana/
+
+---
+### Linl to documenation
+
+* https://docs.google.com/document/d/1eTjV1mtcWX0RqsD2MF-nYyrr8c4NGOBlYkgS-C06wUM/edit?usp=sharing
