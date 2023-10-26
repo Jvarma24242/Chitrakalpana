@@ -35,6 +35,18 @@ The game **Chitrakalpana** aims to challenge and test the player's ability to ch
 * At the top you can see the link at which the applciation will be hosted. If we open that link, we can see our application up and running.
 
 ---
+### Screenshots of the web application can be found below:
+**index.html**
+
+![alt text](https://github.com/Jvarma24242/Chitrakalpana/blob/main/indexPage.png)
+
+**welcome.html**
+
+![alt text](https://github.com/Jvarma24242/Chitrakalpana/blob/main/welcom_page.png)
+
+**sample question page.html**
+![alt text](https://github.com/Jvarma24242/Chitrakalpana/blob/main/sample_question_page.png)
+---
 
 ### Link to hosted game
 
