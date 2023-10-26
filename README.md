@@ -45,6 +45,7 @@ The game **Chitrakalpana** aims to challenge and test the player's ability to ch
 ![alt text](https://github.com/Jvarma24242/Chitrakalpana/blob/main/welcom_page.png)
 
 **sample question page.html**
+
 ![alt text](https://github.com/Jvarma24242/Chitrakalpana/blob/main/sample_question_page.png)
 ---
 
