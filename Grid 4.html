@@ -28,7 +28,7 @@
     }
 
     .button3 {
-        background-image: url('https://cdn.britannica.com/63/59963-050-C03F29B9/Pablo-Picasso.jpg');
+        background-image: url('https://th-thumbnailer.cdn-si-edu.com/Po5QmgivJaemnKo8zX2Iv2JuzOc=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/1c/8b/1c8bd1a1-80e2-4beb-ad84-c26a84ad3769/dp152808.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -85,9 +85,10 @@
 </style>
 
 <body style="background-color: #EBE4D1;">
+    <audio id="backgroundMusic" src="background_music.mp3"></audio>
     <div style="width: 100%; overflow: hidden;">
         <div style="float: left">
-            <a href="home.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
+            <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
                     style="width:50px; height:50px"></img></a>
         </div>
         <div style="width: 250px; float: right; border-radius: 15px 15px 15px 15px ;background-color: #26577C;">
@@ -110,7 +111,7 @@
             onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">Vincent van Gogh</div>
         <div class="option" style="text-align: center;">Salvador Dalí</div>
-        <div class="option" style="text-align: center;">Pablo Picasso</div>
+        <div class="option" style="text-align: center;">Rembrandt</div>
         <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"
             onclick="checkAnswer(this.id)"></button>
         <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded"
@@ -137,7 +138,7 @@
         <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
-        <p>Try Again!!</p>
+        <p>You Lost! You are left with one chance.</p>
         <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
@@ -211,6 +212,15 @@
 
         document.getElementById('nameDisplay').innerText = `Name: ${name}`;
         document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+
+        // Start the background music when the game loads.
+        window.onload = function () {
+            var backgroundMusic = document.getElementById("backgroundMusic");
+            backgroundMusic.play();
+        }
+
+        // Loop the background music so that it plays continuously.
+        backgroundMusic.loop = true;
 
     </script>
 </body>

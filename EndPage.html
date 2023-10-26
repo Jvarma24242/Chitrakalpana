@@ -247,6 +247,7 @@
 </style>
 
 <body>
+    <audio id="backgroundMusic" src="background_music.mp3"></audio>
     <div class="background">
     </div>
     <div class="confetti">
@@ -267,9 +268,11 @@
     <div class="container">
         <h1 style="font-family: cursive;"><span id="greet"></span> <span id="name"></span></h1>
         <div class="score">
-            <p style="font-family: cursive;">Your final score is: <span id="finalScore"></span></p> <!-- Replace 100 with your actual score -->
+            <p style="font-family: cursive;">Your final score is: <span id="finalScore"></span></p>
+            <!-- Replace 100 with your actual score -->
         </div>
-        <button class="btn btn-primary btn-rounded end-button" id="EndGame" style="font-family: cursive;">Go to Home Page!</button>
+        <button class="btn btn-primary btn-rounded end-button" id="EndGame" style="font-family: cursive;">Go to Home
+            Page!</button>
     </div>
 </body>
 
@@ -289,6 +292,15 @@
         // Use the window.location.href property to set the new URL
         window.location.href = "index.html"; // Specify the relative path to your second page
     });
+
+    // Start the background music when the game loads.
+    window.onload = function () {
+        var backgroundMusic = document.getElementById("backgroundMusic");
+        backgroundMusic.play();
+    }
+
+    // Loop the background music so that it plays continuously.
+    backgroundMusic.loop = true;
 </script>
 
 </html>

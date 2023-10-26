@@ -1,91 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <script src="randomiser.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Chithrakalpana Game</title>
+  <meta charset="UTF-8">
+  <script src="randomiser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Chithrakalpana Game</title>
 </head>
 <style>
-    /* Reset some default styles */
-body, h1, button {
+  /* Reset some default styles */
+  body,
+  h1,
+  button {
     margin: 0;
     padding: 0;
-}
+  }
 
-/* Style the content container */
-.content {
+  /* Style the content container */
+  .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff; /* Text color */
+    color: #fff;
+    /* Text color */
     background-color: #EBE4D1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-/* Style the game name */
-h1 {
-    position: relative;
-  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-  font-size: 60px;
-  font-family: 'Alfa Slab One', cursive;
-  position: relative;
-  display: inline-block;
-  background: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  animation: waviy 1s infinite;
-  animation-delay: calc(.1s * var(--i));
-}
-
-.name {
-    position: relative;
-  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-  font-size: 60px;
-  font-family: 'Alfa Slab One', cursive;
-  position: relative;
-  display: inline-block;
-  background: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-}
-
-@keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
   }
-  20% {
-    transform: translateY(-20px)
+
+  /* Style the game name */
+  h1 {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+    font-size: 60px;
+    font-family: 'Alfa Slab One', cursive;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(-225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
   }
-}
 
-@keyframes change {
-  0% {background-color: #4CAF50; transform: scale(1);}
-  50% {background-color: #45a049; transform: scale(1.1);}
-  100% {background-color: #4CAF50; transform: scale(1);}
-}
+  .name {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+    font-size: 60px;
+    font-family: 'Alfa Slab One', cursive;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(-225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+  }
 
-/* Style the "Start Game" button */
-.button {
+  @keyframes waviy {
+
+    0%,
+    40%,
+    100% {
+      transform: translateY(0)
+    }
+
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+
+  @keyframes change {
+    0% {
+      background-color: #4CAF50;
+      transform: scale(1);
+    }
+
+    50% {
+      background-color: #45a049;
+      transform: scale(1.1);
+    }
+
+    100% {
+      background-color: #4CAF50;
+      transform: scale(1);
+    }
+  }
+
+  /* Style the "Start Game" button */
+  .button {
     padding: 10px 20px;
     font-size: 18px;
     border: none;
@@ -93,46 +108,58 @@ h1 {
     cursor: pointer;
 
     display: inline-block;
-  padding: 10px 20px;
-  background-color: coral;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-}
+    padding: 10px 20px;
+    background-color: coral;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+  }
 
-/* Hover effect for the button */
-.button:hover {
+  /* Hover effect for the button */
+  .button:hover {
     animation: change 1s;
-}
-
+  }
 </style>
+
 <body>
-    <div class="content"> 
-        <h1 style="font-family: cursive;">Welcome to Chithrakalpana</h1>
-        <div class="form-group">
-            <label class="name" style="width:400px; font-size: 28px;">Enter Your Name:</label>
-            <br/>
-            <input type="text" id="name" placeholder="Your Name" style="width: 400px; height:50px">
-            <br/><br/>
-            <button class="btn btn-primary btn-rounded button" id="startButton" style="padding: 10px 20px; font-size: 16px; font-family: cursive;">Start Game</button>
-            <button class="btn btn-primary btn-rounded button" id="quitButton" style="padding: 10px 20px; margin-left:160px; font-size: 16px; font-family: cursive;">Quit Game</button>
-        </div>
+  <audio id="backgroundMusic" src="background_music.mp3"></audio>
+  <div class="content">
+    <h1 style="font-family: cursive;">Welcome to Chithrakalpana</h1>
+    <div class="form-group">
+      <label class="name" style="width:400px; font-size: 28px;">Enter Your Name:</label>
+      <br />
+      <input type="text" id="name" placeholder="Your Name" style="width: 400px; height:50px">
+      <br /><br />
+      <button class="btn btn-primary btn-rounded button" id="startButton"
+        style="padding: 10px 20px; font-size: 16px; font-family: cursive;">Start Game</button>
+      <button class="btn btn-primary btn-rounded button" id="quitButton"
+        style="padding: 10px 20px; margin-left:160px; font-size: 16px; font-family: cursive;">Quit Game</button>
     </div>
+  </div>
 
-    <script>
-        // Add a click event listener to the button
-        document.getElementById("quitButton").addEventListener("click", function() {
-            // Use the window.location.href property to set the new URL
-            window.location.href = "home.html"; // Specify the relative path to your second page
-        });
-        document.getElementById("startButton").addEventListener("click", function() {
-            const name = document.getElementById("name").value;
-            // Use the window.location.href property to set the new URL
-            const query = `name=${encodeURIComponent(name)}`;
-            let nextPage = "Grid.html";
+  <script>
+    // Add a click event listener to the button
+    document.getElementById("quitButton").addEventListener("click", function () {
+      // Use the window.location.href property to set the new URL
+      window.location.href = "home.html"; // Specify the relative path to your second page
+    });
+    document.getElementById("startButton").addEventListener("click", function () {
+      const name = document.getElementById("name").value;
+      // Use the window.location.href property to set the new URL
+      const query = `name=${encodeURIComponent(name)}`;
+      let nextPage = "Grid.html";
 
-            window.location.href = `${nextPage}?${query}`; // Specify the relative path to your second page
-        });
-    </script>
+      window.location.href = `${nextPage}?${query}`; // Specify the relative path to your second page
+    });
+    // Start the background music when the game loads.
+    window.onload = function () {
+      var backgroundMusic = document.getElementById("backgroundMusic");
+      backgroundMusic.play();
+    }
+
+    // Loop the background music so that it plays continuously.
+    backgroundMusic.loop = true;
+  </script>
 </body>
+
 </html>

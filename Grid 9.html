@@ -17,7 +17,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        border-radius: 100px;   
+        border-radius: 100px;
     }
 
     .button2 {
@@ -27,6 +27,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button3 {
         background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png');
         background-repeat: no-repeat;
@@ -34,6 +35,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button4 {
         background-image: url('https://cdn.britannica.com/29/22529-004-ED1907BE/Union-Flag-Cross-St-Andrew-of-George.jpg');
         background-repeat: no-repeat;
@@ -41,6 +43,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button5 {
         background-image: url('https://cdn11.bigcommerce.com/s-w6fxwapwzi/images/stencil/1280x1280/products/2524/5333/2x3-germany-flag-image__20615.1582735698.jpg?c=1');
         background-repeat: no-repeat;
@@ -48,6 +51,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button6 {
         background-image: url('https://www.advantour.com/russia/images/symbolics/russia-flag.jpg');
         background-repeat: no-repeat;
@@ -55,6 +59,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button7 {
         background-image: url('https://t3.ftcdn.net/jpg/00/62/19/54/360_F_62195416_wfzM4Baz70OjEU54EhsCpvuQWlIhukPg.jpg');
         background-repeat: no-repeat;
@@ -62,6 +67,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button8 {
         background-image: url('https://media.istockphoto.com/id/878587072/photo/china-flag-a-series-of-flags-of-the-world.jpg?s=612x612&w=0&k=20&c=UaEuM-KRtk71BDDNTVpmTO-wJS2TsC1D0PGcMxJyeyA=');
         background-repeat: no-repeat;
@@ -69,6 +75,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button9 {
         background-image: url('https://media.istockphoto.com/id/934017954/vector/canada-flag.jpg?s=612x612&w=0&k=20&c=QYOJlgWtujlAPzncX5H4UFPDpySMhoh2iPc_zi2t_zQ=');
         background-repeat: no-repeat;
@@ -78,9 +85,10 @@
 </style>
 
 <body>
+    <audio id="backgroundMusic" src="background_music.mp3"></audio>
     <div style="width: 100%; overflow: hidden;">
         <div style="float: left">
-            <a href="home.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
+            <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
                     style="width:50px; height:50px"></img></a>
         </div>
         <div style="width: 250px; float: right; border-radius: 15px 15px 15px 15px ;background-color: #26577C;">
@@ -95,21 +103,30 @@
         </div>
     </div>
     <div class="button-container" style="margin-top: 5px;">
-        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">USA</div>
         <div class="option" style="text-align: center;">India</div>
         <div class="option" style="text-align: center;">France</div>
-        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">UK</div>
         <div class="option" style="text-align: center;">Germany</div>
         <div class="option" style="text-align: center;">Russia</div>
-        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">Japan</div>
         <div class="option" style="text-align: center;">China</div>
         <div class="option" style="text-align: center;">Canada</div>
@@ -121,7 +138,7 @@
         <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
-        <p>Try Again!!</p>
+        <p>You Lost! You are left with one chance.</p>
         <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
@@ -196,6 +213,15 @@
 
         document.getElementById('nameDisplay').innerText = `Name: ${name}`;
         document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+
+        // Start the background music when the game loads.
+        window.onload = function () {
+            var backgroundMusic = document.getElementById("backgroundMusic");
+            backgroundMusic.play();
+        }
+
+        // Loop the background music so that it plays continuously.
+        backgroundMusic.loop = true;
 
     </script>
 </body>

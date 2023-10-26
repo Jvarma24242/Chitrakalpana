@@ -1,114 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Chithrakalpana Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Chithrakalpana Game</title>
 </head>
 <style>
-    /* Reset some default styles */
-body, h1, button {
+  /* Reset some default styles */
+  body,
+  h1,
+  button {
     margin: 0;
     padding: 0;
-}
+  }
 
-/* Style the content container */
-.content {
+  /* Style the content container */
+  .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff; /* Text color */
+    color: #fff;
+    /* Text color */
     background-color: #EBE4D1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
+  }
 
-/* Style the game name */
-/* h1 {
+  /* Style the game name */
+  /* h1 {
     font-size: 36px;
     margin-bottom: 20px;
 } */
 
-h1
-{
-   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
-  display: inline-block;
-      font-size: 100px;
-}
-
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
-
-@keyframes change {
-  0% {background-color: #4CAF50; transform: scale(1);}
-  50% {background-color: #45a049; transform: scale(1.1);}
-  100% {background-color: #4CAF50; transform: scale(1);}
-}
-
-/* Style the "Start Game" button */
-.start-button {
+  h1 {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
     display: inline-block;
-  padding: 10px 20px;
-  background-color: coral;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-}
+    font-size: 100px;
+  }
 
-/* Hover effect for the button */
-.start-button:hover {
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes change {
+    0% {
+      background-color: #4CAF50;
+      transform: scale(1);
+    }
+
+    50% {
+      background-color: #45a049;
+      transform: scale(1.1);
+    }
+
+    100% {
+      background-color: #4CAF50;
+      transform: scale(1);
+    }
+  }
+
+  /* Style the "Start Game" button */
+  .start-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: coral;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  /* Hover effect for the button */
+  .start-button:hover {
     animation: change 1s;
-}
+  }
 
-#backgroundMusic {
-  display: none;
-}
-
+  #backgroundMusic {
+    display: none;
+  }
 </style>
+
 <body>
-    <audio id="backgroundMusic" src="background_music.mp3"></audio>
-    <div class="content"> 
-        <h1 style="font-family: cursive;">Chithrakalpana</h1>
-        <button class="btn btn-primary btn-rounded start-button" id="StartGame" style="font-family: cursive;">Start Game</button>
-    </div>
+  <audio id="backgroundMusic" src="background_music.mp3"></audio>
+  <div class="content">
+    <h1 style="font-family: cursive;">Chithrakalpana</h1>
+    <button class="btn btn-primary btn-rounded start-button" id="StartGame" style="font-family: cursive;">Start
+      Game</button>
+  </div>
 
-    <script>
-        // Add a click event listener to the button
-        document.getElementById("StartGame").addEventListener("click", function() {
-            // Use the window.location.href property to set the new URL
-            window.location.href = "welcome.html"; // Specify the relative path to your second page
-        });
-// Start the background music when the game loads.
-window.onload = function() {
-  var backgroundMusic = document.getElementById("backgroundMusic");
-  backgroundMusic.play();
-}
+  <script>
+    // Add a click event listener to the button
+    document.getElementById("StartGame").addEventListener("click", function () {
+      // Use the window.location.href property to set the new URL
+      window.location.href = "welcome.html"; // Specify the relative path to your second page
+    });
+    // Start the background music when the game loads.
+    window.onload = function () {
+      var backgroundMusic = document.getElementById("backgroundMusic");
+      backgroundMusic.play();
+    }
 
-// Loop the background music so that it plays continuously.
-backgroundMusic.loop = true;
-    </script>
+    // Loop the background music so that it plays continuously.
+    backgroundMusic.loop = true;
+  </script>
 </body>
+
 </html>

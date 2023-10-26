@@ -86,9 +86,10 @@
 </style>
 
 <body style="background-color: #EBE4D1;">
+    <audio id="backgroundMusic" src="background_music.mp3"></audio>
     <div style="width: 100%; overflow: hidden;">
         <div style="float: left">
-            <a href="home.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
+            <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
                     style="width:50px; height:50px"></img></a>
         </div>
         <div style="width: 250px; float: right; border-radius: 15px 15px 15px 15px ;background-color: #26577C;">
@@ -112,7 +113,8 @@
         <div class="option" style="text-align: center;">Anton Chekhov</div>
         <div class="option" style="text-align: center;">Tennessee Williams</div>
         <div class="option" style="text-align: center;">William Shakespeare</div>
-        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="
             checkAnswer(this.id)"></button>
         <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="
@@ -137,7 +139,7 @@
         <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
-        <p>Try Again!!</p>
+        <p>You Lost! You are left with one chance.</p>
         <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
@@ -212,6 +214,15 @@
 
         document.getElementById('nameDisplay').innerText = `Name: ${name}`;
         document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+
+        // Start the background music when the game loads.
+        window.onload = function () {
+            var backgroundMusic = document.getElementById("backgroundMusic");
+            backgroundMusic.play();
+        }
+
+        // Loop the background music so that it plays continuously.
+        backgroundMusic.loop = true;
 
     </script>
 </body>

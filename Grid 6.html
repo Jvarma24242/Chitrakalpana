@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="randomiser.js"></script>
     <meta charset="UTF-8">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="styles.css">
     <title>Chithrakalpana</title>
 </head>
-<style>/* Reset some default styles */
-    
+<style>
+    /* Reset some default styles */
+
     .button1 {
         background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/89/Zahl_2000.jpg');
         background-repeat: no-repeat;
@@ -25,6 +27,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button3 {
         background-image: url('https://previews.123rf.com/images/yalcinadali/yalcinadali1904/yalcinadali190400134/121142918-year-1995-with-old-concrete-wall-on-white-background.jpg');
         background-repeat: no-repeat;
@@ -32,6 +35,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button4 {
         background-image: url('https://previews.123rf.com/images/yalcinadali/yalcinadali1904/yalcinadali190400127/121142911-year-1984-with-old-concrete-wall-on-white-background.jpg');
         background-repeat: no-repeat;
@@ -39,6 +43,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button5 {
         background-image: url('https://thumbs.dreamstime.com/b/golden-d-number-year-isolated-white-background-render-239832302.jpg');
         background-repeat: no-repeat;
@@ -46,6 +51,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button6 {
         background-image: url('https://img.freepik.com/premium-photo/3d-illustration-1912-balloon-with-arizona-flag-colors-isolated-white-background_563584-1910.jpg?w=2000');
         background-repeat: no-repeat;
@@ -53,6 +59,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button7 {
         background-image: url('https://as2.ftcdn.net/v2/jpg/01/28/16/25/1000_F_128162553_VRIgFmGKGg6kEKPtPIYVNcsFblQcwdGH.jpg');
         background-repeat: no-repeat;
@@ -60,6 +67,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button8 {
         background-image: url('https://as1.ftcdn.net/v2/jpg/01/28/16/24/1000_F_128162433_myTWVNEPjzG7EIGMiyMSruYB7jK7ZW6C.jpg');
         background-repeat: no-repeat;
@@ -67,6 +75,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button9 {
         background-image: url('https://as1.ftcdn.net/v2/jpg/04/51/33/52/1000_F_451335204_8yIZQAuQPlqSDP9og1kLbxVJoyZQ1uHI.jpg');
         background-repeat: no-repeat;
@@ -74,13 +83,13 @@
         background-size: cover;
         border-radius: 100px;
     }
-    
-
 </style>
+
 <body>
+    <audio id="backgroundMusic" src="background_music.mp3"></audio>
     <div style="width: 100%; overflow: hidden;">
         <div style="float: left">
-            <a href="home.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
+            <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
                     style="width:50px; height:50px"></img></a>
         </div>
         <div style="width: 250px; float: right; border-radius: 15px 15px 15px 15px ;background-color: #26577C;">
@@ -95,33 +104,42 @@
         </div>
     </div>
     <div class="button-container" style="margin-top: 5px;">
-        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">2000</div>
         <div class="option" style="text-align: center;">1876</div>
         <div class="option" style="text-align: center;">1995</div>
-        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">1984</div>
         <div class="option" style="text-align: center;">1982</div>
         <div class="option" style="text-align: center;">1912</div>
-        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">1989</div>
         <div class="option" style="text-align: center;">1934</div>
         <div class="option" style="text-align: center;">1923</div>
-        
+
     </div>
     <div id="crt_dialog" class="dialog-box">
         <p>You Won 🎉</p>
         <button id="quitButtonCrt" onclick="closeDialog('crt_dialog')">Quit</button>
-	    <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
+        <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
-        <p>Try Again!!</p>
+        <p>You Lost! You are left with one chance.</p>
         <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
@@ -130,73 +148,83 @@
         <button id="quitButtonReveal" onclick="closeDialog('reveal_ans')">Quit</button>
         <button id="continueButtonReveal" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
-<script>
-var num_button_clicks = 0;
-const urlParams = new URLSearchParams(window.location.search);
-var name = urlParams.get('name');
-var score = parseInt(urlParams.get('score'));
+    <script>
+        var num_button_clicks = 0;
+        const urlParams = new URLSearchParams(window.location.search);
+        var name = urlParams.get('name');
+        var score = parseInt(urlParams.get('score'));
 
-// Function to show the dialog box
-function rightAnswer() {
-    score = score + 1;
-    document.getElementById("crt_dialog").style.display = "block";
-}
-
-function tryAgain() {
-    document.getElementById("wrong_dialog").style.display = "block";
-}
-
-function revealAns() {
-    document.getElementById("reveal_ans").style.display = "block";
-}
-
-// Function to close the dialog box
-function closeDialog(dialog_id) {
-    document.getElementById(dialog_id).style.display = "none";
-}
-
-// Verify if the answer clicked is correct or not.
-function checkAnswer(buttonId) {
-    num_button_clicks = num_button_clicks + 1;
-    if (buttonId == "button6") {
-        rightAnswer();
-    } else {
-        if(num_button_clicks == 1) {
-            tryAgain();
-        } else {
-            revealAns();
+        // Function to show the dialog box
+        function rightAnswer() {
+            score = score + 1;
+            document.getElementById("crt_dialog").style.display = "block";
         }
-    }
-}
 
-document.getElementById("quitButtonCrt").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "index.html"; // Specify the relative path to your second page
-});
-document.getElementById("quitButtonWrong").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "index.html"; // Specify the relative path to your second page
-});
-document.getElementById("quitButtonReveal").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "index.html"; // Specify the relative path to your second page
-});
+        function tryAgain() {
+            document.getElementById("wrong_dialog").style.display = "block";
+        }
 
-document.getElementById("continueButtonCrt").addEventListener("click", function() {
-           // Use the window.location.href property to set the new URL
-           // Use the window.location.href property to set the new URL
-           const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
+        function revealAns() {
+            document.getElementById("reveal_ans").style.display = "block";
+        }
+
+        // Function to close the dialog box
+        function closeDialog(dialog_id) {
+            document.getElementById(dialog_id).style.display = "none";
+        }
+
+        // Verify if the answer clicked is correct or not.
+        function checkAnswer(buttonId) {
+            num_button_clicks = num_button_clicks + 1;
+            if (buttonId == "button6") {
+                rightAnswer();
+            } else {
+                if (num_button_clicks == 1) {
+                    tryAgain();
+                } else {
+                    revealAns();
+                }
+            }
+        }
+
+        document.getElementById("quitButtonCrt").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
+        document.getElementById("quitButtonWrong").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
+        document.getElementById("quitButtonReveal").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
+
+        document.getElementById("continueButtonCrt").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            // Use the window.location.href property to set the new URL
+            const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
             window.location.href = `Grid 7.html?${query}`; // Specify the relative path to your second page
         });
-document.getElementById("continueButtonReveal").addEventListener("click", function() {
+        document.getElementById("continueButtonReveal").addEventListener("click", function () {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
             window.location.href = `Grid 7.html?${query}`; // Specify the relative path to your second page
         });
 
-document.getElementById('nameDisplay').innerText = `Name: ${name}`;
-document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+        document.getElementById('nameDisplay').innerText = `Name: ${name}`;
+        document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
 
-</script>
+        // Start the background music when the game loads.
+        window.onload = function () {
+            var backgroundMusic = document.getElementById("backgroundMusic");
+            backgroundMusic.play();
+        }
+
+        // Loop the background music so that it plays continuously.
+        backgroundMusic.loop = true;
+
+    </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="randomiser.js"></script>
     <meta charset="UTF-8">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="styles.css">
     <title>Chithrakalpana</title>
 </head>
-<style>/* Reset some default styles */
-    
+<style>
+    /* Reset some default styles */
+
     .button1 {
         background-image: url('https://bezos-earth-fund-prod.imgix.net/uploads/22-037_EFD_2022-10-13_WHY-CONGO-BASIN_THUMBNAILS_16X9_1_2023-02-15-190229_gije.png?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=675&q=80&w=1200&s=632c648b8fa191efcf78036b1d7b9eda');
         background-repeat: no-repeat;
@@ -25,6 +27,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button3 {
         background-image: url('https://geography.name/wp-content/uploads/2015/10/GATEWAY-Lena.jpg');
         background-repeat: no-repeat;
@@ -32,6 +35,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button4 {
         background-image: url('https://www.sodhatravel.com/hubfs/The%20Story%20and%20Significance%20of%20River%20Ganga-Sodha%20Travel.jpg');
         background-repeat: no-repeat;
@@ -39,6 +43,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button5 {
         background-image: url('https://media.istockphoto.com/id/514651019/photo/view-over-the-orinocco-river.jpg?s=612x612&w=0&k=20&c=AKvb3P3mXZMBYst2Bz52gtjqg5_Scv09XipvuucnSkI=');
         background-repeat: no-repeat;
@@ -46,6 +51,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button6 {
         background-image: url('https://www.arcgis.com/sharing/rest/content/items/ba769245730943699456b7428eb6e7fa/info/thumbnail/ago_downloaded.jpg?w=800');
         background-repeat: no-repeat;
@@ -53,6 +59,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button7 {
         background-image: url('https://www.americanrivers.org/wp-content/uploads/2022/12/B-9.png');
         background-repeat: no-repeat;
@@ -60,6 +67,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button8 {
         background-image: url('https://cdn.creatureandcoagency.com/uploads/2018/09/Nile-River-Facts-Image-2.jpg');
         background-repeat: no-repeat;
@@ -67,6 +75,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button9 {
         background-image: url('https://cdn.britannica.com/77/152577-050-5563FDA0/bend-Yangtze-River-Yunnan-China.jpg');
         background-repeat: no-repeat;
@@ -74,13 +83,13 @@
         background-size: cover;
         border-radius: 100px;
     }
-    
-
 </style>
+
 <body>
+    <audio id="backgroundMusic" src="background_music.mp3"></audio>
     <div style="width: 100%; overflow: hidden;">
         <div style="float: left">
-            <a href="home.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
+            <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
                     style="width:50px; height:50px"></img></a>
         </div>
         <div style="width: 250px; float: right; border-radius: 15px 15px 15px 15px ;background-color: #26577C;">
@@ -95,33 +104,42 @@
         </div>
     </div>
     <div class="button-container" style="margin-top: 5px;">
-        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">Congo river</div>
         <div class="option" style="text-align: center;">Amazon river</div>
         <div class="option" style="text-align: center;">Lena river</div>
-        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">Ganga river</div>
         <div class="option" style="text-align: center;">Orinoco river</div>
         <div class="option" style="text-align: center;">Parana river</div>
-        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">Missisipi river</div>
         <div class="option" style="text-align: center;">Nile river</div>
         <div class="option" style="text-align: center;">Yangtze river</div>
-        
+
     </div>
     <div id="crt_dialog" class="dialog-box">
         <p>You Won 🎉</p>
         <button id="quitButtonCrt" onclick="closeDialog('crt_dialog')">Quit</button>
-	    <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
+        <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
-        <p>Try Again!!</p>
+        <p>You Lost! You are left with one chance.</p>
         <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
@@ -130,75 +148,85 @@
         <button id="quitButtonReveal" onclick="closeDialog('reveal_ans')">Quit</button>
         <button id="continueButtonReveal" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
-<script>
-var num_button_clicks = 0;
-const urlParams = new URLSearchParams(window.location.search);
-var name = urlParams.get('name');
-var score = parseInt(urlParams.get('score'));
-// Function to show the dialog box
-function rightAnswer() {
-    score = score + 1
-    document.getElementById("crt_dialog").style.display = "block";
-}
-
-function tryAgain() {
-    document.getElementById("wrong_dialog").style.display = "block";
-}
-
-function revealAns() {
-    document.getElementById("reveal_ans").style.display = "block";
-}
-
-// Function to close the dialog box
-function closeDialog(dialog_id) {
-    document.getElementById(dialog_id).style.display = "none";
-}
-
-// Verify if the answer clicked is correct or not.
-function checkAnswer(buttonId) {
-    num_button_clicks = num_button_clicks + 1;
-    if (buttonId == "button8") {
-        rightAnswer();
-    } else {
-        if(num_button_clicks == 1) {
-            tryAgain();
-        } else {
-            revealAns();
-            // TODO: Redirect users to grid2.html.
+    <script>
+        var num_button_clicks = 0;
+        const urlParams = new URLSearchParams(window.location.search);
+        var name = urlParams.get('name');
+        var score = parseInt(urlParams.get('score'));
+        // Function to show the dialog box
+        function rightAnswer() {
+            score = score + 1
+            document.getElementById("crt_dialog").style.display = "block";
         }
-    }
-}
 
-document.getElementById("quitButtonCrt").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "index.html"; // Specify the relative path to your second page
-});
-document.getElementById("quitButtonWrong").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "index.html"; // Specify the relative path to your second page
-});
-document.getElementById("quitButtonReveal").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "index.html"; // Specify the relative path to your second page
-});
+        function tryAgain() {
+            document.getElementById("wrong_dialog").style.display = "block";
+        }
+
+        function revealAns() {
+            document.getElementById("reveal_ans").style.display = "block";
+        }
+
+        // Function to close the dialog box
+        function closeDialog(dialog_id) {
+            document.getElementById(dialog_id).style.display = "none";
+        }
+
+        // Verify if the answer clicked is correct or not.
+        function checkAnswer(buttonId) {
+            num_button_clicks = num_button_clicks + 1;
+            if (buttonId == "button8") {
+                rightAnswer();
+            } else {
+                if (num_button_clicks == 1) {
+                    tryAgain();
+                } else {
+                    revealAns();
+                    // TODO: Redirect users to grid2.html.
+                }
+            }
+        }
+
+        document.getElementById("quitButtonCrt").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
+        document.getElementById("quitButtonWrong").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
+        document.getElementById("quitButtonReveal").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
 
 
-document.getElementById("continueButtonCrt").addEventListener("click", function() {
+        document.getElementById("continueButtonCrt").addEventListener("click", function () {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
             window.location.href = `Grid 4.html?${query}`; // Specify the relative path to your second page
         });
-document.getElementById("continueButtonReveal").addEventListener("click", function() {
+        document.getElementById("continueButtonReveal").addEventListener("click", function () {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
             window.location.href = `Grid 4.html?${query}`; // Specify the relative path to your second page
         });
 
-document.getElementById('nameDisplay').innerText = `Name: ${name}`;
-document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+        document.getElementById('nameDisplay').innerText = `Name: ${name}`;
+        document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+
+        // Start the background music when the game loads.
+        window.onload = function () {
+            var backgroundMusic = document.getElementById("backgroundMusic");
+            backgroundMusic.play();
+        }
+
+        // Loop the background music so that it plays continuously.
+        backgroundMusic.loop = true;
 
 
 
-</script>
+    </script>
 </body>
+
 </html>

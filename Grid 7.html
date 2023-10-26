@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="randomiser.js"></script>
     <meta charset="UTF-8">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Chithrakalpana</title>
 </head>
-<style>/* Reset some default styles */
-    
+<style>
+    /* Reset some default styles */
+
     .button1 {
         background-image: url('https://images.unsplash.com/photo-1636115734305-aac2f83cd8d4?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZG9sbGFyfGVufDB8fDB8fHww');
         background-repeat: no-repeat;
@@ -25,6 +27,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button3 {
         background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/coindesk/PHDFJSNJ2ZG2LL5HO7FW76HPQA.jpg');
         background-repeat: no-repeat;
@@ -32,6 +35,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button4 {
         background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/1000_yen_Natsume_Soseki.jpg/640px-1000_yen_Natsume_Soseki.jpg');
         background-repeat: no-repeat;
@@ -39,6 +43,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button5 {
         background-image: url('https://www.investopedia.com/thmb/ak983jHGT68hQvxG2Fe2s1jI5b0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-153205900-5b08cb708e1b6e003ed4e7d6.jpg');
         background-repeat: no-repeat;
@@ -46,6 +51,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button6 {
         background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Banknote_5000_rubles_%281997%29_front.jpg');
         background-repeat: no-repeat;
@@ -53,6 +59,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button7 {
         background-image: url('https://www.un.org/africarenewal/sites/www.un.org.africarenewal/files/styles/ar_main_story_big_picture/public/WEBIMG_4758.jpg?itok=JBDoEtge');
         background-repeat: no-repeat;
@@ -60,6 +67,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button8 {
         background-image: url('https://images.wsj.net/im-23969?width=1280&size=1');
         background-repeat: no-repeat;
@@ -67,6 +75,7 @@
         background-size: cover;
         border-radius: 100px;
     }
+
     .button9 {
         background-image: url('https://c8.alamy.com/comp/E5P521/turkish-lira-banknotes-isolated-E5P521.jpg');
         background-repeat: no-repeat;
@@ -74,12 +83,13 @@
         background-size: cover;
         border-radius: 100px;
     }
-
 </style>
+
 <body>
+    <audio id="backgroundMusic" src="background_music.mp3"></audio>
     <div style="width: 100%; overflow: hidden;">
         <div style="float: left">
-            <a href="home.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
+            <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/7781/7781465.png"
                     style="width:50px; height:50px"></img></a>
         </div>
         <div style="width: 250px; float: right; border-radius: 15px 15px 15px 15px ;background-color: #26577C;">
@@ -94,32 +104,41 @@
         </div>
     </div>
     <div class="button-container" style="margin-top: 5px;">
-        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button1" class="matrix-button button1 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button2" class="matrix-button button2 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button3" class="matrix-button button3 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">USD</div>
         <div class="option" style="text-align: center;">Euro</div>
         <div class="option" style="text-align: center;">Swiss Franc</div>
-        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button4" class="matrix-button button4 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button5" class="matrix-button button5 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button6" class="matrix-button button6 btn btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">Yen</div>
         <div class="option" style="text-align: center;">HKD</div>
         <div class="option" style="text-align: center;">Ruble</div>
-        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
-        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded" onclick="checkAnswer(this.id)"></button>
+        <button id="button7" class="matrix-button btn button7 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button8" class="matrix-button btn button8 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
+        <button id="button9" class="matrix-button btn button9 btn-primary btn-rounded"
+            onclick="checkAnswer(this.id)"></button>
         <div class="option" style="text-align: center;">Yuan</div>
         <div class="option" style="text-align: center;">Krona</div>
-        <div class="option" style="text-align: center;">lira</div>    
+        <div class="option" style="text-align: center;">lira</div>
     </div>
     <div id="crt_dialog" class="dialog-box">
         <p>You Won 🎉</p>
         <button id="quitButtonCrt" onclick="closeDialog('crt_dialog')">Quit</button>
-	    <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
+        <button id="continueButtonCrt" onclick="closeDialog('crt_dialog')">Continue</button>
     </div>
     <div id="wrong_dialog" class="dialog-box">
-        <p>Try Again!!</p>
+        <p>You Lost! You are left with one chance.</p>
         <button id="quitButtonWrong" onclick="closeDialog('wrong_dialog')">Quit</button>
         <button onclick="closeDialog('wrong_dialog')">Try Again!</button>
     </div>
@@ -128,73 +147,83 @@
         <button id="quitButtonReveal" onclick="closeDialog('reveal_ans')">Quit</button>
         <button id="continueButtonReveal" onclick="closeDialog('reveal_ans')">Continue</button>
     </div>
-<script>
-var num_button_clicks = 0;
-const urlParams = new URLSearchParams(window.location.search);
-var name = urlParams.get('name');
-var score = parseInt(urlParams.get('score'));
+    <script>
+        var num_button_clicks = 0;
+        const urlParams = new URLSearchParams(window.location.search);
+        var name = urlParams.get('name');
+        var score = parseInt(urlParams.get('score'));
 
-// Function to show the dialog box
-function rightAnswer() {
-    score = score + 1
-    document.getElementById("crt_dialog").style.display = "block";
-}
-
-function tryAgain() {
-    document.getElementById("wrong_dialog").style.display = "block";
-}
-
-function revealAns() {
-    document.getElementById("reveal_ans").style.display = "block";
-}
-
-// Function to close the dialog box
-function closeDialog(dialog_id) {
-    document.getElementById(dialog_id).style.display = "none";
-}
-
-// Verify if the answer clicked is correct or not.
-function checkAnswer(buttonId) {
-    num_button_clicks = num_button_clicks + 1;
-    if (buttonId == "button4") {
-        rightAnswer();
-    } else {
-        if(num_button_clicks == 1) {
-            tryAgain();
-        } else {
-            revealAns();
+        // Function to show the dialog box
+        function rightAnswer() {
+            score = score + 1
+            document.getElementById("crt_dialog").style.display = "block";
         }
-    }
-}
 
-document.getElementById("quitButtonCrt").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "index.html"; // Specify the relative path to your second page
-});
-document.getElementById("quitButtonWrong").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "index.html"; // Specify the relative path to your second page
-});
-document.getElementById("quitButtonReveal").addEventListener("click", function() {
-        // Use the window.location.href property to set the new URL
-        window.location.href = "index.html"; // Specify the relative path to your second page
-});
+        function tryAgain() {
+            document.getElementById("wrong_dialog").style.display = "block";
+        }
 
-document.getElementById("continueButtonCrt").addEventListener("click", function() {
-           // Use the window.location.href property to set the new URL
-           // Use the window.location.href property to set the new URL
-           const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
+        function revealAns() {
+            document.getElementById("reveal_ans").style.display = "block";
+        }
+
+        // Function to close the dialog box
+        function closeDialog(dialog_id) {
+            document.getElementById(dialog_id).style.display = "none";
+        }
+
+        // Verify if the answer clicked is correct or not.
+        function checkAnswer(buttonId) {
+            num_button_clicks = num_button_clicks + 1;
+            if (buttonId == "button4") {
+                rightAnswer();
+            } else {
+                if (num_button_clicks == 1) {
+                    tryAgain();
+                } else {
+                    revealAns();
+                }
+            }
+        }
+
+        document.getElementById("quitButtonCrt").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
+        document.getElementById("quitButtonWrong").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
+        document.getElementById("quitButtonReveal").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            window.location.href = "index.html"; // Specify the relative path to your second page
+        });
+
+        document.getElementById("continueButtonCrt").addEventListener("click", function () {
+            // Use the window.location.href property to set the new URL
+            // Use the window.location.href property to set the new URL
+            const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
             window.location.href = `Grid 8.html?${query}`; // Specify the relative path to your second page
         });
-document.getElementById("continueButtonReveal").addEventListener("click", function() {
+        document.getElementById("continueButtonReveal").addEventListener("click", function () {
             // Use the window.location.href property to set the new URL
             const query = `name=${encodeURIComponent(name)}&score=${encodeURIComponent(score)}`;
             window.location.href = `Grid 8.html?${query}`; // Specify the relative path to your second page
         });
 
-document.getElementById('nameDisplay').innerText = `Name: ${name}`;
-document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+        document.getElementById('nameDisplay').innerText = `Name: ${name}`;
+        document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
 
-</script>
+        // Start the background music when the game loads.
+        window.onload = function () {
+            var backgroundMusic = document.getElementById("backgroundMusic");
+            backgroundMusic.play();
+        }
+
+        // Loop the background music so that it plays continuously.
+        backgroundMusic.loop = true;
+
+    </script>
 </body>
+
 </html>
